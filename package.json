@@ -1,0 +1,31 @@
+{
+  "name": "danfarrelly.nyc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/babel-cli/bin/babel-node.js ./index.js",
+    "css": "./node_modules/stylus/bin/stylus -c css/style.styl -o css/style.css",
+    "css-watch": "./node_modules/stylus/bin/stylus -c -w css/style.styl -o css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djfarrelly/djfarrelly.github.io.git"
+  },
+  "author": "Dan Farrelly <daniel.j.farrelly@gmail.com> (http://danfarrelly.nyc)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djfarrelly/djfarrelly.github.io/issues"
+  },
+  "homepage": "https://github.com/djfarrelly/djfarrelly.github.io#readme",
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "babel-cli": "^6.9.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.8.0",
+    "babel-preset-react": "^6.5.0",
+    "marked": "^0.3.5",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "stylus": "^0.54.5"
+  }
+}

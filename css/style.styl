@@ -1,0 +1,150 @@
+$fontSize = 18px
+$fontWeight = 400
+$headerLineHeight = 1.4em
+
+$textColor = rgb(63, 63, 63)
+$textColorLight = rgb(110, 110, 110)
+$linkColorLight = #01579B
+$linkColorBlue = rgba(22, 129, 201, 0.8)
+$linkColorBlueHover = rgb(8, 156, 255)
+
+$verticalMargin = 1em
+$sideMargin = 2em
+$maxWidth = 40em
+
+// Base css
+
+html,
+body
+  width 100%
+  height 100%
+
+body
+  margin 0
+  background #fff
+
+  font-family Lato, Helvetica, Arial, sans-serif
+  font-size $fontSize
+  font-weight $fontWeight
+  color $textColor
+  -webkit-font-smoothing antialiased
+
+h1,
+h2,
+h3
+  font-weight $fontWeight
+
+a
+  position relative
+  text-decoration none
+  transition all 250ms ease
+
+  &,
+  &:visited,
+  &:hover,
+  &:active
+    color $linkColorLight
+
+  &::after
+    content ""
+    position absolute
+    width 100%
+    height 2px
+    bottom 0
+    left 0
+    background-color $linkColorLight
+    opacity 0
+    transition all .3s ease-in-out 0s
+    transform translateY(4px)
+
+  &:hover::after
+    opacity 1
+    transform translateY(2px)
+
+p,
+small
+  max-width $maxWidth
+
+
+p
+  line-height 1.3em
+
+small
+  font-size 0.7em
+
+.hidden
+  display none !important
+  visibility hidden
+
+
+// Animation
+
+@keyframes fadeIn
+  from
+    opacity 0
+  to
+    opacity 1
+
+
+// Main site elements
+
+.site-header
+  width 100%
+  margin 1em auto
+  overflow hidden
+
+  line-height $headerLineHeight
+
+.site-title
+  max-width 110px
+  padding 0.4em 0.7em
+  margin 1em auto
+  border 3px solid $textColor
+  font-size 1.1em
+  text-align center
+  white-space nowrap
+
+.site-nav
+  margin 0 auto
+  padding 0
+
+  font-size $fontSize
+  font-weight 700
+  list-style none
+  text-align center
+
+  $base = 2000ms
+  $delta = 500ms
+
+  for $i in (1...6)
+    li:nth-of-type(6n + {$i})
+      animation fadeIn $base + $i * $delta
+
+  li
+    margin: $verticalMargin 0
+    padding: 0
+    transition all 200ms ease-in-out
+
+
+.site-nav-container
+  margin 1em $sideMargin
+  
+.site-content
+  max-width $maxWidth
+  margin 0 auto
+  font-size 16px
+  animation fadeIn 2s
+  
+  img
+    max-width 100%
+
+.post-header
+  margin 1em 0
+
+.post-title
+  margin 0
+
+.post-date
+  margin 0.5em 0
+  font-size 14px
+  color $textColorLight  
