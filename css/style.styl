@@ -131,14 +131,14 @@ small
 
 .site-nav-container
   margin 1em $sideMargin
-  
+
 .site-content
   width: 90%
   max-width $maxWidth
   margin 0 auto
   font-size 18px
   animation fadeIn 2s
-  
+
   img
     max-width 100%
 
@@ -151,4 +151,21 @@ small
 .post-date
   margin 0.5em 0
   font-size 14px
-  color $textColorLight  
+  color $textColorLight
+
+.post-body
+  img
+    display block
+    max-width 100%
+    margin 1em auto
+
+.img-med
+  width 440px
+
+
+@media (max-width 440px)
+  .site-content
+    font-size 16px
+  .post-title
+    font-size 1.8em
+

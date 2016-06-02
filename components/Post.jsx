@@ -13,7 +13,7 @@ class Post extends React.Component {
           </h1>
           <p className="post-date">{formatDate(this.props.date)}</p>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: this.props.html }}></div>
+        <div className="post-body" dangerouslySetInnerHTML={{ __html: this.props.html }}></div>
       </Layout>
     );
   }

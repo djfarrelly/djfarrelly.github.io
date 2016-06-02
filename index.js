@@ -19,7 +19,7 @@ const writeFile = (info, callback) => {
   const filepath = info.slug ? `blog/${info.slug}/index.html` : `index.html`;
   const dir = path.dirname(filepath);
   if (dir === '.') {
-    fs.writeFile(filepath, prependDoctype(info.html), callback);  
+    fs.writeFile(filepath, prependDoctype(info.html), callback);
   } else {
     mkdirp(dir, (err) => fs.writeFile(filepath, prependDoctype(info.html), callback));
   }

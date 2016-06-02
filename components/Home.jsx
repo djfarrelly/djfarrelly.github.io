@@ -15,7 +15,7 @@ class Home extends React.Component {
               </h1>
               <p className="post-date">{formatDate(post.date)}</p>
             </div>
-            <div dangerouslySetInnerHTML={{ __html: post.snippet }}></div>
+            <div className="post-body" dangerouslySetInnerHTML={{ __html: post.snippet }}></div>
           </div>
         })}
       </Layout>
