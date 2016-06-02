@@ -24,6 +24,20 @@ need to take to get up and running:
 
 ### Verify your domain with ACM
 
+In your AWS console, head over to Certificate Manager and "Request a new Certificate." Here you
+can add your domain and subdomains. For example, I'm serving my size without the www, and may want
+to add a subdomain soon, so I chose:
+
+```
+timezone.io
+*.timezone.io
+```
+
+Now for this to work, you'll need to be able to
+[verify your domain by email](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate.html),
+meaning you'll have to be able to access one of the contact emails in WHOIS or one of the following
+emails at your domain: `admin@ administrator@ hostmaster@ postmaster@ webmaster@`.
+
 ### Run your app behind a load balancer
 
 ### Add the listener .ebextension
