@@ -6,7 +6,7 @@ import { formatDate } from '../lib/utils';
 class Post extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout showLinks={false}>
         <div className="post-header">
           <h1 className="post-title">
             <a href={`/blog/${this.props.slug}/`}>{this.props.title}</a>

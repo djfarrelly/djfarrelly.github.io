@@ -1,8 +1,8 @@
 [
   {
     "title": "Moving your Elastic Beanstalk app to https for free with AWS Certificate Manager",
-    "url": "elastic-beanstalk-https-for-free",
-    "date": "2016-05-01T18:00:00",
+    "slug": "elastic-beanstalk-https-for-free",
+    "date": "2016-06-01",
     "tags" : ["aws", "elastic beanstalk", "dev ops"]
   }
 ]

@@ -4,6 +4,7 @@ import GA from './GA';
 class Layout extends React.Component {
   render() {
     const cssUpdated = new Date().toJSON().replace(/T.+/, '');
+    const navStyle = this.props.showLinks === false ? { display: 'none' } : {};
     return (
       <html>
         <head>
@@ -16,16 +17,18 @@ class Layout extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta id="theme-color" name="theme-color" content="#246B9C" />
 
-          <link href='//fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css' />
+          <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css' />
           <link rel="stylesheet" href={`/css/style.css?updated=${cssUpdated}`} />
           <link rel="icon" type="image/png" href="/images/favicon.png" />
         </head>
         <body>
           <header className="site-header">
-            <h1 className="site-title">
-              Dan Farrelly
-            </h1>
-            <nav className="site-nav-container">
+            <a href="/">
+              <h1 className="site-title">
+                Dan Farrelly
+              </h1>
+            </a>
+            <nav className="site-nav-container" style={navStyle}>
               <ul className="site-nav">
                 <li><a href="https://timezone.io" target="_blank">Timezone.io</a></li>
                 <li><a href="http://danfarrelly.nyc/MailDev/" target="_blank">MailDev</a></li>

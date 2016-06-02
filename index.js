@@ -27,11 +27,10 @@ const writeFile = (info, callback) => {
 
 async.map(postFiles, readFile, (err, postMarkdown) => {
 
-  const postHtml = postMarkdown.map((md) => marked(md));
-
   const posts = postConfig.map((post, idx) => {
-    const props = post;
-    props.html = postHtml[idx]
+    const html = marked(postMarkdown[idx]);
+    post.snippet = html;
+    const props = Object.assign({ html: html }, post);
     post.html = renderToString(React.createElement(Post, props));
     return post;
   });
