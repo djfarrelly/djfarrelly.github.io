@@ -9,7 +9,7 @@ class Post extends React.Component {
       <Layout showLinks={false}>
         <div className="post-header">
           <h1 className="post-title">
-            <a href={`/blog/${this.props.slug}/`}>{this.props.title}</a>
+            {this.props.title}
           </h1>
           <p className="post-date">{formatDate(this.props.date)}</p>
         </div>
