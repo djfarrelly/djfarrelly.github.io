@@ -21,7 +21,9 @@ renderer.link = (href, title, text) => {
   return `<a href="${href}" ${attr}>${text}</a>`;
 };
 
-const postFiles = postConfig.map((p) => `./posts/${p.slug}.md`);
+const postList = postConfig.filter((p) => !p.draft);
+
+const postFiles = postList.map((p) => `./posts/${p.slug}.md`);
 
 const readFile = (file, callback) => fs.readFile(file, 'utf8', callback)
 const prependDoctype = (html) => `<!DOCTYPE html>${html}`;
@@ -42,7 +44,7 @@ const extractSnippet = (html) => {
 
 async.map(postFiles, readFile, (err, postMarkdown) => {
 
-  const posts = postConfig.map((post, idx) => {
+  const posts = postList.map((post, idx) => {
     const html = marked(postMarkdown[idx], { renderer });
     post.snippet = extractSnippet(html);
     const props = Object.assign({ html: html }, post);
