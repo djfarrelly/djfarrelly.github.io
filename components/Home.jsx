@@ -11,7 +11,7 @@ class Home extends React.Component {
           return <div key={idx}>
             <div className="post-header">
               <h1 className="post-title">
-                <a href={`${post.slug}/`}>{post.title}</a>
+                <a href={`/blog/${post.slug}/`}>{post.title}</a>
               </h1>
               <p className="post-date">{formatDate(post.date)}</p>
             </div>
