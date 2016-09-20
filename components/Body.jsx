@@ -16,9 +16,12 @@ class Body extends React.Component {
           {this.props.children}
         </div>
         <footer className="site-header">
-          <h1 className="site-title">
+          <p
+            className="site-title"
+            style={{ display: this.props.hideFooterName && 'none' }}
+          >
             Dan Farrelly
-          </h1>
+          </p>
           <nav className="site-nav-container">
             <ul className="site-nav">
               <li><a href="http://www.twitter.com/djfarrelly" target="_blank">Twitter</a></li>

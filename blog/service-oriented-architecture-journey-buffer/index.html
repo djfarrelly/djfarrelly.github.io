@@ -1,4 +1,4 @@
-<!DOCTYPE html><html data-reactroot="" data-reactid="1" data-react-checksum="-1134789437"><head data-reactid="2"><meta charset="utf-8" data-reactid="3"/><meta http-equiv="X-UA-Compatible" content="IE=edge" data-reactid="4"/><title data-reactid="5">Dan Farrelly</title><meta name="description" content="Software Architect at Buffer based in New York City." data-reactid="6"/><meta name="viewport" content="width=device-width, initial-scale=1" data-reactid="7"/><meta id="theme-color" name="theme-color" content="#246B9C" data-reactid="8"/><link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" data-reactid="9"/><link rel="stylesheet" href="/css/style.css?updated=2016-09-20" data-reactid="10"/><link rel="icon" type="image/png" href="/images/favicon.png" data-reactid="11"/><meta property="og:title" content="Beginning the journey towards a service oriented architecture at Buffer" data-reactid="12"/><meta property="og:url" content="http://danfarrelly.nyc/blog/service-oriented-architecture-journey-buffer" data-reactid="13"/><meta property="og:description" content="As Buffer is well into into it’s 6th year of existence, we’ve evolved a lot as an engineering team. Now we&#x27;re beginning our transition towards a service oriented architecture." data-reactid="14"/><meta property="og:type" content="article" data-reactid="15"/><meta property="og:article:auther" content="https://www.facebook.com/danfarrelly" data-reactid="16"/></head><body data-reactid="17"><header class="site-header" data-reactid="18"><a href="/" data-reactid="19"><h1 class="site-title" data-reactid="20">Dan Farrelly</h1></a></header><div class="site-content" data-reactid="21"><div class="post-header" data-reactid="22"><h1 class="post-title" data-reactid="23">Beginning the journey towards a service oriented architecture at Buffer</h1><p class="post-date" data-reactid="24">September 19, 2016</p></div><div class="post-body" data-reactid="25"><p>As <a href="https://buffer.com">Buffer</a> is well into into it’s 6th year of existence,
+<!DOCTYPE html><html data-reactroot="" data-reactid="1" data-react-checksum="1408800822"><head data-reactid="2"><meta charset="utf-8" data-reactid="3"/><meta http-equiv="X-UA-Compatible" content="IE=edge" data-reactid="4"/><title data-reactid="5">Dan Farrelly</title><meta name="description" content="Software Architect at Buffer based in New York City." data-reactid="6"/><meta name="viewport" content="width=device-width, initial-scale=1" data-reactid="7"/><meta id="theme-color" name="theme-color" content="#246B9C" data-reactid="8"/><link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" data-reactid="9"/><link rel="stylesheet" href="/css/style.css?updated=2016-09-20" data-reactid="10"/><link rel="icon" type="image/png" href="/images/favicon.png" data-reactid="11"/><meta property="og:title" content="Beginning the journey towards a service oriented architecture at Buffer" data-reactid="12"/><meta property="og:url" content="/blog/service-oriented-architecture-journey-buffer" data-reactid="13"/><meta property="og:description" content="As Buffer is well into into it’s 6th year of existence, we’ve evolved a lot as an engineering team. Now our architecture is evolving again." data-reactid="14"/><meta property="og:type" content="article" data-reactid="15"/><meta property="og:article:auther" content="https://www.facebook.com/danfarrelly" data-reactid="16"/></head><body data-reactid="17"><header class="site-header" data-reactid="18"><a href="/" data-reactid="19"><h1 class="site-title" data-reactid="20">Dan Farrelly</h1></a></header><div class="site-content" data-reactid="21"><div class="post-header" data-reactid="22"><h1 class="post-title" data-reactid="23">Beginning the journey towards a service oriented architecture at Buffer</h1><p class="post-date" data-reactid="24">September 19, 2016</p></div><div class="post-body" data-reactid="25"><p>As <a href="https://buffer.com"  target="_blank">Buffer</a> is well into into it’s 6th year of existence,
 we’ve evolved a lot as an engineering team. In early 2014 when I joined we were
 6 engineers, 4 who worked on our web application and api specifically. We’re a
 lot larger now pushing a lot more code into our monolithic repo every day. Over
@@ -16,9 +16,9 @@ a fatal error somewhere in the code could bring down a very different part of
 our application. Things were fragile.</p>
 <h2 id="a-different-approach">A different approach</h2>
 <p>The feeling was building across the team. Our CTO,
-<a href="https://twitter.com/sunils34">Sunil</a>, and I started talking seriously about a
+<a href="https://twitter.com/sunils34"  target="_blank">Sunil</a>, and I started talking seriously about a
 re-architecture effort in April of this year. Sharing articles,
-<a href="https://www.youtube.com/watch?v=5yK3lx-PQV0">videos</a>, and brainstorming over
+<a href="https://www.youtube.com/watch?v=5yK3lx-PQV0"  target="_blank">videos</a>, and brainstorming over
 Slack and video culminated when we met in New York in May and laid out some
 ideas on what we needed to do. We were about to start our journey towards
 migrating Buffer to a service oriented architecture.</p>
@@ -27,10 +27,10 @@ had been incubating a reimagined containerized development environment built
 with Docker so it felt logical to figure out how we can use Docker the way we
 wanted to in production. Despite our systems team having used ECS for a bit and
 enjoying aspects of Mesosphere, we settled on
-<a href="http://kubernetes.io/">Kubernetes</a> to handle our cluster management and
+<a href="http://kubernetes.io/"  target="_blank">Kubernetes</a> to handle our cluster management and
 container orchestration needs. Kubernetes’ focus on running containers, being
 cloud-provider-agnostic, and most importantly it’s maturity were some of the
-many reasons we chose it. There are plenty of <a href="https://railsadventures.wordpress.com/2015/12/06/why-we-chose-kubernetes-over-ecs/">great
+many reasons we chose it. There are plenty of <a href="https://railsadventures.wordpress.com/2015/12/06/why-we-chose-kubernetes-over-ecs/"  target="_blank">great
 articles</a>
 that compare solutions, but the key was choosing one and moving forward.</p>
 <h2 id="creating-a-plan">Creating a plan</h2>
@@ -40,7 +40,7 @@ breaking things apart, but wanted to set some solid precedents early on. Working
 out what we needed to have in place and creating a few quality first services
 was key as we knew many engineers will look to these for inspiration and
 guidance for they build their own services. Borrowing a concept and name from
-Sam Newman’s <a href="https://www.amazon.com/Building-Microservices-Sam-Newman-ebook/dp/B00T3N7XB4"><em>Building
+Sam Newman’s <a href="https://www.amazon.com/Building-Microservices-Sam-Newman-ebook/dp/B00T3N7XB4"  target="_blank"><em>Building
 Microservices</em></a>,
 we were out to build out first Exemplar.</p>
 <p>A few things we decided our exemplar service must have:</p>
@@ -65,9 +65,9 @@ Through weekly sprints we took a few weeks building the service and hitting all
 of our requirements. A small team ramped up on all things Kubernetes, learning
 the ropes to ensure we’d be confident our cluster could handle production
 traffic. Our systems team divided up parts they would own,
-<a href="https://twitter.com/stevenc81">Steven</a> worked on out logging infrastructure,
-<a href="https://twitter.com/kiriappeee">Adnan</a> focused on cluster management and our
-deploys and <a href="https://twitter.com/eric_khun">Eric</a> focused on monitoring. After
+<a href="https://twitter.com/stevenc81"  target="_blank">Steven</a> worked on out logging infrastructure,
+<a href="https://twitter.com/kiriappeee"  target="_blank">Adnan</a> focused on cluster management and our
+deploys and <a href="https://twitter.com/eric_khun"  target="_blank">Eric</a> focused on monitoring. After
 three weeks we started diverting some traffic to our new service. Outside of a
 few expected minor hiccups and bug fixes, everything was running smoothly! This
 was a major win, but there was still lots left to do.</p>
@@ -92,7 +92,7 @@ our application like user authentication and the posting of updates (800+k a
 day) to new services. It’s been an incredible learning experience for myself and
 the team so far and I can’t wait to share more updates and learnings along our
 journey!</p>
-</div></div><footer class="site-header" data-reactid="26"><h1 class="site-title" data-reactid="27">Dan Farrelly</h1><nav class="site-nav-container" data-reactid="28"><ul class="site-nav" data-reactid="29"><li data-reactid="30"><a href="http://www.twitter.com/djfarrelly" target="_blank" data-reactid="31">Twitter</a></li><li data-reactid="32"><a href="https://github.com/djfarrelly" target="_blank" data-reactid="33">Github</a></li><li data-reactid="34">Projects:</li><li data-reactid="35"><a href="https://timezone.io" target="_blank" data-reactid="36">Timezone.io</a></li><li data-reactid="37"><a href="http://danfarrelly.nyc/MailDev/" target="_blank" data-reactid="38">MailDev</a></li></ul></nav></footer><div data-reactid="39">
+</div></div><footer class="site-header" data-reactid="26"><p class="site-title" data-reactid="27">Dan Farrelly</p><nav class="site-nav-container" data-reactid="28"><ul class="site-nav" data-reactid="29"><li data-reactid="30"><a href="http://www.twitter.com/djfarrelly" target="_blank" data-reactid="31">Twitter</a></li><li data-reactid="32"><a href="https://github.com/djfarrelly" target="_blank" data-reactid="33">Github</a></li><li data-reactid="34">Projects:</li><li data-reactid="35"><a href="https://timezone.io" target="_blank" data-reactid="36">Timezone.io</a></li><li data-reactid="37"><a href="http://danfarrelly.nyc/MailDev/" target="_blank" data-reactid="38">MailDev</a></li></ul></nav></footer><div data-reactid="39">
       <script>
         var _gaq=[['_setAccount','UA-27586336-1'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

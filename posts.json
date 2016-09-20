@@ -3,7 +3,7 @@
     "title": "Beginning the journey towards a service oriented architecture at Buffer",
     "slug": "service-oriented-architecture-journey-buffer",
     "date": "2016-09-19",
-    "description": "As Buffer is well into into it’s 6th year of existence, we’ve evolved a lot as an engineering team. Now we're beginning our transition towards a service oriented architecture.",
+    "description": "As Buffer is well into into it’s 6th year of existence, we’ve evolved a lot as an engineering team. Now our architecture is evolving again.",
     "tags" : ["service oriented architecture", "SOA", "kubernetes", "buffer"]
   }
 ]
