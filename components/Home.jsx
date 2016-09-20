@@ -1,24 +1,30 @@
 import React from 'react';
-import Layout from './Layout';
-import { formatDate } from '../lib/utils';
-
+import Head from './Head';
+import Body from './Body';
+import { formatDate, getPostUrl } from '../lib/utils';
 
 class Home extends React.Component {
   render() {
     return (
-      <Layout>
-        {this.props.posts.map((post, idx) => {
-          return <div key={idx}>
-            <div className="post-header">
-              <h1 className="post-title">
-                <a href={`/blog/${post.slug}/`}>{post.title}</a>
-              </h1>
-              <p className="post-date">{formatDate(post.date)}</p>
+      <html>
+        <Head />
+        <Body>
+          {this.props.posts.map((post, idx) => {
+            return <div key={idx}>
+              <div className="post-header">
+                <h1 className="post-title">
+                  <a href={getPostUrl(post)}>{post.title}</a>
+                </h1>
+                <p className="post-date">{formatDate(post.date)}</p>
+              </div>
+              <div
+                className="post-body"
+                dangerouslySetInnerHTML={{ __html: post.snippet }}
+              ></div>
             </div>
-            <div className="post-body" dangerouslySetInnerHTML={{ __html: post.snippet }}></div>
-          </div>
-        })}
-      </Layout>
+          })}
+        </Body>
+      </html>
     );
   }
 }
