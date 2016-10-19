@@ -53,8 +53,11 @@ After a few weeks of experimentation, we happily settled on [Kubernetes](http://
 handle our cluster management and container orchestration needs. There were several factors that led
 us to choose Kubernetes:
 
-1. It’s focus on running containers 2. It is cloud-provider-agnostic 3. The growing Kubernetes
-community of developers 4. The platform is mature (Started in mid 2014, it hit 1.0 in July 2015)
+1. It’s focus on running containers
+2. It is cloud-provider-agnostic
+3. The growing Kubernetes
+community of developers
+4. The platform is mature (Started in mid 2014, it hit 1.0 in July 2015)
 
 We hope to share a lot more about this decision in the coming months. For us, Kubernetes had what we
 needed to go all-in with it as our orchestration platform.
