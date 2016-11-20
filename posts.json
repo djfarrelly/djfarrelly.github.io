@@ -3,7 +3,7 @@
     "title": "KubeCon Talk: Kubernetes in Production at Buffer",
     "slug": "kubecon-talk-kubernetes-production-buffer",
     "date": "2016-11-20",
-    "description": "As Buffer is well into into it’s sixth year of existence, we’ve evolved a lot as an engineering team. Now our architecture is evolving again.",
+    "description": "At KubeCon 2015, I gave a talk about how we started using Kuberentes at Buffer including our learnings along the way.",
     "tags" : ["kubecon", "kubernetes", "containers", "buffer"]
   },
   {
