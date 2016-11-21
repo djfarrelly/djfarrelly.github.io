@@ -12,7 +12,7 @@ class Post extends React.Component {
           <meta property="og:url" content={getPostUrl(this.props)} />
           <meta property="og:description" content={this.props.description} />
           <meta property="og:type" content='article' />
-          <meta property="og:article:auther" content='https://www.facebook.com/danfarrelly' />
+          <meta property="og:article:author" content='https://www.facebook.com/danfarrelly' />
         </Head>
         <Body>
           <div className="post-header">

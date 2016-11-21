@@ -7,7 +7,11 @@ class Home extends React.Component {
   render() {
     return (
       <html>
-        <Head />
+        <Head>
+          <meta property="og:title" content="Dan Farrelly" />
+          <meta property="og:url" content="http://danfarrelly.nyc" />
+          <meta property="og:description" content="Dan Farrelly is the architect at Buffer leading the team's transition to a service-oriented architecture" />
+        </Head>
         <Body hideFooterName={true}>
           <div className="post-list">
             {this.props.posts.map((post, idx) => {
