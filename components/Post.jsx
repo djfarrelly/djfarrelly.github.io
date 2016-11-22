@@ -17,7 +17,7 @@ class Post extends React.Component {
         <Body>
           <div
             itemProp="blogPost"
-            itemScope=""
+            itemScope="itemscope"
             itemType="http://schema.org/BlogPosting"
           >
             <div className="post-header">

@@ -15,15 +15,15 @@ class Home extends React.Component {
         <Body hideFooterName={true}>
           <div
             className="post-list"
-            itemProp="blogPost"
-            itemScope=""
-            itemType="http://schema.org/BlogPosting"
+            itemProp="blog"
+            itemScope="itemscope"
+            itemType="http://schema.org/Blog"
           >
             {this.props.posts.map((post, idx) => {
               return <div
                 key={idx}
                 itemProp="blogPost"
-                itemScope=""
+                itemScope="itemscope"
                 itemType="http://schema.org/BlogPosting"
               >
                 <div className="post-header">
