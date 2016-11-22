@@ -5,9 +5,11 @@ import mkdirp from 'mkdirp';
 import marked from 'marked';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
+import RSS from 'rss';
 
 import Home from './components/Home';
 import Post from './components/Post';
+import { getPostUrl } from './lib/utils';
 
 import postConfig from './posts.json';
 
@@ -58,9 +60,28 @@ async.map(postFiles, readFile, (err, postMarkdown) => {
 
   files = files.concat(posts);
 
+  const feed = new RSS({
+    title: "Dan Farrelly's blog",
+    feed_url: "http://danfarrelly.nyc/rss.xml",
+    site_url: "http://danfarrelly.nyc"
+  })
+
+  posts.map(post => {
+    return {
+      url: `http://danfarrelly.nyc/${getPostUrl(post)}`,
+      title: post.title,
+      description: post.description,
+      date: post.date,
+      author: "Dan Farrelly",
+      categories: post.tags
+    }
+  }).map(feed.item.bind(feed));
+
   async.map(files, writeFile, (err) => {
     if (err) throw err;
-    console.log('Done');
+    fs.writeFile('rss.xml', feed.xml({ indent: true }), (err) => {
+      console.log('Done');
+    });
   });
 
 });

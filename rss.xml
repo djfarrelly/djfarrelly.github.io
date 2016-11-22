@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Dan Farrelly's blog]]></title>
+        <description><![CDATA[Dan Farrelly's blog]]></description>
+        <link>http://danfarrelly.nyc</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 22 Nov 2016 01:19:19 GMT</lastBuildDate>
+        <atom:link href="http://danfarrelly.nyc/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[KubeCon Talk: Kubernetes in Production at Buffer]]></title>
+            <description><![CDATA[At KubeCon 2015, I gave a talk about how we started using Kuberentes at Buffer including our learnings along the way.]]></description>
+            <link>http://danfarrelly.nyc//blog/kubecon-talk-kubernetes-production-buffer</link>
+            <guid isPermaLink="true">http://danfarrelly.nyc//blog/kubecon-talk-kubernetes-production-buffer</guid>
+            <category><![CDATA[kubecon]]></category>
+            <category><![CDATA[kubernetes]]></category>
+            <category><![CDATA[containers]]></category>
+            <category><![CDATA[buffer]]></category>
+            <dc:creator><![CDATA[Dan Farrelly]]></dc:creator>
+            <pubDate>Sun, 20 Nov 2016 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How We’re Implementing Service-Oriented Architecture at Buffer After 6 years of Technical Buildup]]></title>
+            <description><![CDATA[As Buffer is well into into it’s sixth year of existence, we’ve evolved a lot as an engineering team. Now our architecture is evolving again.]]></description>
+            <link>http://danfarrelly.nyc//blog/service-oriented-architecture-buffer</link>
+            <guid isPermaLink="true">http://danfarrelly.nyc//blog/service-oriented-architecture-buffer</guid>
+            <category><![CDATA[service oriented architecture]]></category>
+            <category><![CDATA[SOA]]></category>
+            <category><![CDATA[kubernetes]]></category>
+            <category><![CDATA[buffer]]></category>
+            <dc:creator><![CDATA[Dan Farrelly]]></dc:creator>
+            <pubDate>Tue, 18 Oct 2016 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
