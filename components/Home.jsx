@@ -34,7 +34,7 @@ class Home extends React.Component {
                     <time dateTime="2011-05-17T22:00" itemProp="datePublished">
                       {formatDate(this.props.date)}
                     </time>
-                    <span style="display:none" itemProp="author" itemScope="" itemType="http://schema.org/Person">
+                    <span style={{display:"none"}} itemProp="author" itemScope="" itemType="http://schema.org/Person">
                       <span itemProp="name">Dan Farrelly</span>
                     </span>
                   </p>
