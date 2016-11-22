@@ -31,7 +31,7 @@ class Home extends React.Component {
                     <a href={getPostUrl(post)}>{post.title}</a>
                   </h2>
                   <p className="post-date">
-                    <time dateTime="2011-05-17T22:00" itemProp="datePublished">
+                    <time dateTime={this.props.date} itemProp="datePublished">
                       {formatDate(this.props.date)}
                     </time>
                     <span style={{display:"none"}} itemProp="author" itemScope="" itemType="http://schema.org/Person">

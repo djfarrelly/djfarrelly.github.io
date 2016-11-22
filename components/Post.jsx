@@ -25,7 +25,7 @@ class Post extends React.Component {
                 {this.props.title}
               </h1>
               <p className="post-date">
-                <time dateTime="2011-05-17T22:00" itemProp="datePublished">
+                <time dateTime={this.props.date} itemProp="datePublished">
                   {formatDate(this.props.date)}
                 </time>
                 {" by "}
