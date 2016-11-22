@@ -4,6 +4,7 @@
     "slug": "kubecon-talk-kubernetes-production-buffer",
     "date": "2016-11-20",
     "description": "At KubeCon 2015, I gave a talk about how we started using Kuberentes at Buffer including our learnings along the way.",
+    "image": "https://i.ytimg.com/vi/EC_ZRLsw58M/maxresdefault.jpg",
     "tags" : ["kubecon", "kubernetes", "containers", "buffer"]
   },
   {
@@ -11,6 +12,7 @@
     "slug": "service-oriented-architecture-buffer",
     "date": "2016-10-18",
     "description": "As Buffer is well into into it’s sixth year of existence, we’ve evolved a lot as an engineering team. Now our architecture is evolving again.",
+    "image": "http://localhost:3333/images/posts/kubernetes-cluster.png",
     "tags" : ["service oriented architecture", "SOA", "kubernetes", "buffer"]
   },
   {
