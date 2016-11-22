@@ -15,16 +15,31 @@ class Post extends React.Component {
           <meta property="og:article:author" content='https://www.facebook.com/danfarrelly' />
         </Head>
         <Body>
-          <div className="post-header">
-            <h1 className="post-title">
-              {this.props.title}
-            </h1>
-            <p className="post-date">{formatDate(this.props.date)}</p>
-          </div>
           <div
-            className="post-body"
-            dangerouslySetInnerHTML={{ __html: this.props.html }}
-          ></div>
+            itemProp="blogPost"
+            itemScope=""
+            itemType="http://schema.org/BlogPosting"
+          >
+            <div className="post-header">
+              <h1 className="post-title" itemProp="name headline">
+                {this.props.title}
+              </h1>
+              <p className="post-date">
+                <time dateTime="2011-05-17T22:00" itemProp="datePublished">
+                  {formatDate(this.props.date)}
+                </time>
+                {" by "}
+                <span itemProp="author" itemScope="" itemType="http://schema.org/Person">
+                  <span itemProp="name">Dan Farrelly</span>
+                </span>
+              </p>
+            </div>
+            <div
+              className="post-body"
+              itemProp="articleBody"
+              dangerouslySetInnerHTML={{ __html: this.props.html }}
+            ></div>
+          </div>
         </Body>
       </html>
     );

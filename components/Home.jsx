@@ -13,16 +13,33 @@ class Home extends React.Component {
           <meta property="og:description" content="Dan Farrelly is the architect at Buffer leading the team's transition to a service-oriented architecture" />
         </Head>
         <Body hideFooterName={true}>
-          <div className="post-list">
+          <div
+            className="post-list"
+            itemProp="blogPost"
+            itemScope=""
+            itemType="http://schema.org/BlogPosting"
+          >
             {this.props.posts.map((post, idx) => {
-              return <div key={idx}>
+              return <div
+                key={idx}
+                itemProp="blogPost"
+                itemScope=""
+                itemType="http://schema.org/BlogPosting"
+              >
                 <div className="post-header">
-                  <h2 className="post-title">
+                  <h2 className="post-title" itemProp="name headline">
                     <a href={getPostUrl(post)}>{post.title}</a>
                   </h2>
-                  <p className="post-date">{formatDate(post.date)}</p>
+                  <p className="post-date">
+                    <time dateTime="2011-05-17T22:00" itemProp="datePublished">
+                      {formatDate(this.props.date)}
+                    </time>
+                    <span style="display:none" itemProp="author" itemScope="" itemType="http://schema.org/Person">
+                      <span itemProp="name">Dan Farrelly</span>
+                    </span>
+                  </p>
                 </div>
-                <p>{post.description}</p>
+                <p itemProp="description">{post.description}</p>
                 <p>
                   <a href={getPostUrl(post)}><strong>Read more...</strong></a>
                 </p>
