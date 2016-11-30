@@ -10,7 +10,14 @@ class Home extends React.Component {
         <Head>
           <meta property="og:title" content="Dan Farrelly" />
           <meta property="og:url" content="http://danfarrelly.nyc" />
-          <meta property="og:description" content="Dan Farrelly is the architect at Buffer leading the team's transition to a service-oriented architecture" />
+          <meta
+            property="og:description"
+            content="Dan Farrelly is the architect at Buffer leading the team's transition to a service-oriented architecture"
+          />
+          <meta
+            name="google-site-verification"
+            content="MKYWJyvqSUEJDS-W42zXoEUZOggAoyKsobl6XU6-uCw"
+          />
         </Head>
         <Body hideFooterName={true}>
           <div
