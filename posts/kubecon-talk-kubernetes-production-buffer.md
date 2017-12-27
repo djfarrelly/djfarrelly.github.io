@@ -1,4 +1,4 @@
-At KubeCon 2015, I gave a talk about how we started using [Kuberentes](http://kubernetes.io/) at [Buffer](https://buffer.com) including our learnings along the way. The talk was focused on what our initial challenges were, how Kubernetes would help us with those challenges and the plan that we executed to begin our transition to running applications and services in production on a Kubernetes cluster.
+At KubeCon 2016, I gave a talk about how we started using [Kuberentes](http://kubernetes.io/) at [Buffer](https://buffer.com) including our learnings along the way. The talk was focused on what our initial challenges were, how Kubernetes would help us with those challenges and the plan that we executed to begin our transition to running applications and services in production on a Kubernetes cluster.
 
 <div class="video">
     <iframe

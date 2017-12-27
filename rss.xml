@@ -4,11 +4,11 @@
         <description><![CDATA[Dan Farrelly's blog]]></description>
         <link>http://danfarrelly.nyc</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 30 Nov 2016 14:08:37 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 27 Dec 2017 01:04:44 GMT</lastBuildDate>
         <atom:link href="http://danfarrelly.nyc/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[KubeCon Talk: Kubernetes in Production at Buffer]]></title>
-            <description><![CDATA[At KubeCon 2015, I gave a talk about how we started using Kuberentes at Buffer including our learnings along the way.]]></description>
+            <description><![CDATA[At KubeCon 2016, I gave a talk about how we started using Kuberentes at Buffer including our learnings along the way.]]></description>
             <link>http://danfarrelly.nyc//blog/kubecon-talk-kubernetes-production-buffer</link>
             <guid isPermaLink="true">http://danfarrelly.nyc//blog/kubecon-talk-kubernetes-production-buffer</guid>
             <category><![CDATA[kubecon]]></category>

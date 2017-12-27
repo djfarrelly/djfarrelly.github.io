@@ -3,7 +3,7 @@
     "title": "KubeCon Talk: Kubernetes in Production at Buffer",
     "slug": "kubecon-talk-kubernetes-production-buffer",
     "date": "2016-11-20",
-    "description": "At KubeCon 2015, I gave a talk about how we started using Kuberentes at Buffer including our learnings along the way.",
+    "description": "At KubeCon 2016, I gave a talk about how we started using Kuberentes at Buffer including our learnings along the way.",
     "image": "https://i.ytimg.com/vi/EC_ZRLsw58M/maxresdefault.jpg",
     "tags" : ["kubecon", "kubernetes", "containers", "buffer"]
   },
