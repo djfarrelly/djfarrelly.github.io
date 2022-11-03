@@ -1,25 +1,32 @@
 [
   {
+    "title": "Cloud skills gap - focusing on the wrong problem",
+    "slug": "cloud-skills-gap-focusing-on-the-wrong-problem",
+    "date": "2022-11-03",
+    "description": "There have been a couple recent posts that I've read about the cloud skills gap including some conversations on Twitter that I think are focusing on the wrong problem.",
+    "tags": ["cloud", "cloud skills", "aws", "cloud infra", "gcp", "devops"]
+  },
+  {
     "title": "KubeCon Talk: Kubernetes in Production at Buffer",
     "slug": "kubecon-talk-kubernetes-production-buffer",
     "date": "2016-11-20",
     "description": "At KubeCon 2016, I gave a talk about how we started using Kuberentes at Buffer including our learnings along the way.",
     "image": "https://i.ytimg.com/vi/EC_ZRLsw58M/maxresdefault.jpg",
-    "tags" : ["kubecon", "kubernetes", "containers", "buffer"]
+    "tags": ["kubecon", "kubernetes", "containers", "buffer"]
   },
   {
     "title": "How We’re Implementing Service-Oriented Architecture at Buffer After 6 years of Technical Buildup",
     "slug": "service-oriented-architecture-buffer",
     "date": "2016-10-18",
     "description": "As Buffer is well into into it’s sixth year of existence, we’ve evolved a lot as an engineering team. Now our architecture is evolving again.",
-    "image": "http://localhost:3333/images/posts/kubernetes-cluster.png",
-    "tags" : ["service oriented architecture", "SOA", "kubernetes", "buffer"]
+    "image": "/images/posts/kubernetes-cluster.png",
+    "tags": ["service oriented architecture", "SOA", "kubernetes", "buffer"]
   },
   {
-    "draft": true,
-    "title": "Moving your Elastic Beanstalk app to https for free with AWS Certificate Manager",
-    "slug": "elastic-beanstalk-https-for-free",
-    "date": "2016-06-01",
-    "tags" : ["aws", "elastic beanstalk", "dev ops"]
+    "title": "About",
+    "slug": "about",
+    "description": "",
+    "image": "",
+    "tags": ["dan farrelly", "daniel farrelly", "inngest", "buffer", "cto"]
   }
 ]

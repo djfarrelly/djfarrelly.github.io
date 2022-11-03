@@ -57,7 +57,11 @@ async.map(postFiles, readFile, (err, postMarkdown) => {
     return post;
   });
 
-  const homepageHtml = renderToString(React.createElement(Home, { posts }));
+  const visiblePosts = posts.filter((p) => !p.draft && p.slug !== "about");
+
+  const homepageHtml = renderToString(
+    React.createElement(Home, { posts: visiblePosts })
+  );
 
   let files = [{ html: homepageHtml }];
 

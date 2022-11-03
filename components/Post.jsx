@@ -35,9 +35,11 @@ class Post extends React.Component {
               <h1 className="post-title">
                 {this.props.title}
               </h1>
-              <p className="post-date">
-                <time>{formatDate(this.props.date)}</time> by Dan Farrelly
-              </p>
+              {this.props.date && (
+                <p className="post-date">
+                  <time>{formatDate(this.props.date)}</time> by Dan Farrelly
+                </p>
+              )}
             </div>
             <div
               className="post-body"

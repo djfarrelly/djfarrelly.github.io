@@ -24,6 +24,7 @@ class Body extends React.Component {
           </p>
           <nav className="site-nav-container">
             <ul className="site-nav">
+              <li><a href="/blog/about">About</a></li>
               <li><a href="https://twitter.com/djfarrelly" target="_blank">Twitter</a></li>
               <li><a href="https://github.com/djfarrelly" target="_blank">Github</a></li>
               <li>Work:</li>
