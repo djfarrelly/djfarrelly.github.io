@@ -21,7 +21,7 @@ body
   margin 0
   background #fff
 
-  font-family Lato, Helvetica, Arial, sans-serif
+  font-family -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"
   font-size $fontSize
   font-weight $fontWeight
   color $textColor
@@ -43,21 +43,9 @@ a
   &:active
     color $linkColor
 
-  &::after
-    content ""
-    position absolute
-    width 100%
-    height 2px
-    bottom 0
-    left 0
-    background-color $linkColor
-    opacity 0
-    transition all .3s ease-in-out 0s
-    transform translateY(4px)
-
-  &:hover::after
-    opacity 1
-    transform translateY(2px)
+  &:hover,
+  &:active
+    text-decoration underline
 
 p,
 small
@@ -100,6 +88,9 @@ pre
 
   line-height $headerLineHeight
 
+.site-home-link:hover
+  text-decoration none
+
 .site-title
   max-width 110px
   padding 0.4em 0.7em
@@ -112,6 +103,11 @@ pre
   white-space nowrap
 
 .site-nav
+  display flex
+  justify-content center
+  align-items center
+  flex-wrap wrap
+  gap 2rem
   margin 0 auto
   padding 0
 
@@ -123,18 +119,17 @@ pre
   $base = 2000ms
   $delta = 500ms
 
-  for $i in (1...6)
+  for $i in (1...10)
     li:nth-of-type(6n + {$i})
       animation fadeIn $base + $i * $delta
 
   li
-    margin: $verticalMargin 0
     padding: 0
     transition all 200ms ease-in-out
 
 
 .site-nav-container
-  margin 1em $sideMargin
+  margin 2rem $sideMargin
 
 .site-content
   width: 90%
@@ -146,15 +141,19 @@ pre
   img
     max-width 100%
 
+.post
+  margin: 3rem 0;
+
 .post-header
-  margin 1em 0
+  margin 1rem 0
 
 .post-title
   margin 0
+  line-height 150%
 
 .post-date
-  margin 0.5em 0
-  font-size 14px
+  margin 0.5rem 0
+  font-size 0.8rem
   color $textColorLight
 
 .post-body

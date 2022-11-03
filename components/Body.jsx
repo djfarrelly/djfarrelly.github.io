@@ -6,7 +6,7 @@ class Body extends React.Component {
     return (
       <body>
         <header className="site-header">
-          <a href="/">
+          <a href="/" className="site-home-link">
             <h1 className="site-title">
               Dan Farrelly
             </h1>
@@ -24,11 +24,12 @@ class Body extends React.Component {
           </p>
           <nav className="site-nav-container">
             <ul className="site-nav">
-              <li><a href="http://www.twitter.com/djfarrelly" target="_blank">Twitter</a></li>
+              <li><a href="https://twitter.com/djfarrelly" target="_blank">Twitter</a></li>
               <li><a href="https://github.com/djfarrelly" target="_blank">Github</a></li>
-              <li>Projects:</li>
+              <li>Work:</li>
+              <li><a href="https://www.inngest.com" target="_blank">Inngest</a></li>
               <li><a href="https://timezone.io" target="_blank">Timezone.io</a></li>
-              <li><a href="http://danfarrelly.nyc/MailDev/" target="_blank">MailDev</a></li>
+              <li><a href="https://maildev.github.io/maildev/" target="_blank">MailDev</a></li>
             </ul>
           </nav>
         </footer>

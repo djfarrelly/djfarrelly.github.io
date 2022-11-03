@@ -29,6 +29,7 @@ class Home extends React.Component {
             {this.props.posts.map((post, idx) => {
               return <div
                 key={idx}
+                className="post"
                 itemProp="blogPost"
                 itemScope="itemscope"
                 itemType="http://schema.org/BlogPosting"
@@ -48,7 +49,7 @@ class Home extends React.Component {
                 </div>
                 <p itemProp="description">{post.description}</p>
                 <p>
-                  <a href={getPostUrl(post)}><strong>Read more...</strong></a>
+                  <a href={getPostUrl(post)}>Read more...</a>
                 </p>
               </div>
             })}

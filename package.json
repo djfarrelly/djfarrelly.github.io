@@ -31,5 +31,8 @@
     "react-dom": "^15.1.0",
     "rss": "1.2.1",
     "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
