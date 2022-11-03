@@ -1,5 +1,5 @@
 {
-  "name": "danfarrelly.nyc",
+  "name": "danfarrelly.com",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/djfarrelly/djfarrelly.github.io.git"
   },
-  "author": "Dan Farrelly <daniel.j.farrelly@gmail.com> (http://danfarrelly.nyc)",
+  "author": "Dan Farrelly <daniel.j.farrelly@gmail.com> (https://danfarrelly.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/djfarrelly/djfarrelly.github.io/issues"

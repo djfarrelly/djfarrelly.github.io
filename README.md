@@ -1,4 +1,4 @@
-# danfarrelly.nyc
+# danfarrelly.com
 
 ```
 npm i

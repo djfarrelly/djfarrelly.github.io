@@ -9,10 +9,10 @@ class Home extends React.Component {
       <html>
         <Head>
           <meta property="og:title" content="Dan Farrelly" />
-          <meta property="og:url" content="http://danfarrelly.nyc" />
+          <meta property="og:url" content="https://danfarrelly.com" />
           <meta
             property="og:description"
-            content="Dan Farrelly is the architect at Buffer leading the team's transition to a service-oriented architecture"
+            content="Founder at Inngest.com, former CTO at Buffer.com. Built Timezone.io & Maildev as side projects."
           />
           <meta
             name="google-site-verification"
