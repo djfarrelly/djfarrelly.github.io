@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from './Head';
 import Body from './Body';
-import { formatDate, getPostUrl } from '../lib/utils';
+import { formatDate, getFullPostUrl } from '../lib/utils';
 
 class Post extends React.Component {
   render() {
@@ -12,22 +12,27 @@ class Post extends React.Component {
     const MARKUP = {
       "@context": "http://schema.org",
       "@type": "BlogPosting",
-      url: getPostUrl(this.props),
+      url: getFullPostUrl(this.props),
       headline: this.props.title,
       datePublished: this.props.date,
       image: this.props.image,
       author: AUTHOR,
       publisher: AUTHOR
     };
+    const title = `${this.props.title} - Dan Farrelly`
     return (
       <html>
         <Head>
+          <title>{title}</title>
+          <link rel="canonical" href={getFullPostUrl(this.props)}/>
           <meta property="og:title" content={this.props.title} />
-          <meta property="og:url" content={getPostUrl(this.props)} />
+          <meta property="og:url" content={getFullPostUrl(this.props)} />
           <meta property="og:description" content={this.props.description} />
           {!!this.props.image && <meta property="og:image" content={this.props.image} />}
           <meta property="og:type" content='article' />
           <meta property="og:article:author" content='https://www.facebook.com/danfarrelly' />
+          <meta name="twitter:card" content="summary"></meta>
+          <meta name="twitter:creator" content="@djfarrelly" />
         </Head>
         <Body>
           <div>

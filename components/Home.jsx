@@ -8,6 +8,8 @@ class Home extends React.Component {
     return (
       <html>
         <Head>
+          <title>Dan Farrelly</title>
+          <meta name="description" content="Founder at Inngest.com, former CTO at Buffer.com. Built Timezone.io & Maildev as side projects." />
           <meta property="og:title" content="Dan Farrelly" />
           <meta property="og:url" content="https://danfarrelly.com" />
           <meta

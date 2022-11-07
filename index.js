@@ -4,7 +4,7 @@ import async from "async";
 import mkdirp from "mkdirp";
 import marked from "marked";
 import React from "react";
-import { renderToString } from "react-dom/server";
+import { renderToStaticMarkup } from "react-dom/server";
 import RSS from "rss";
 
 import Home from "./components/Home";
@@ -53,13 +53,13 @@ async.map(postFiles, readFile, (err, postMarkdown) => {
     const html = marked(postMarkdown[idx], { renderer });
     post.snippet = extractSnippet(html);
     const props = Object.assign({ html: html }, post);
-    post.html = renderToString(React.createElement(Post, props));
+    post.html = renderToStaticMarkup(React.createElement(Post, props));
     return post;
   });
 
   const visiblePosts = posts.filter((p) => !p.draft && p.slug !== "about");
 
-  const homepageHtml = renderToString(
+  const homepageHtml = renderToStaticMarkup(
     React.createElement(Home, { posts: visiblePosts })
   );
 
@@ -76,7 +76,7 @@ async.map(postFiles, readFile, (err, postMarkdown) => {
   posts
     .map((post) => {
       return {
-        url: `${domain}/${getPostUrl(post)}`,
+        url: `${domain}${getPostUrl(post)}`,
         title: post.title,
         description: post.description,
         date: post.date,

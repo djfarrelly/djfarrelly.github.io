@@ -7,9 +7,6 @@ const Head = (props) => {
       <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
-      <title>Dan Farrelly</title>
-
-      <meta name="description" content="Founder at Inngest.com, former CTO at Buffer.com. Built Timezone.io & Maildev as side projects." />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta id="theme-color" name="theme-color" content="#246B9C" />
 

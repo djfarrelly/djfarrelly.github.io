@@ -4,13 +4,13 @@
         <description><![CDATA[Dan Farrelly's blog]]></description>
         <link>https://danfarrelly.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 03 Nov 2022 19:09:19 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Nov 2022 20:17:22 GMT</lastBuildDate>
         <atom:link href="https://danfarrelly.com/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Cloud skills gap - focusing on the wrong problem]]></title>
             <description><![CDATA[There have been a couple recent posts that I've read about the cloud skills gap including some conversations on Twitter that I think are focusing on the wrong problem.]]></description>
-            <link>https://danfarrelly.com//blog/cloud-skills-gap-focusing-on-the-wrong-problem</link>
-            <guid isPermaLink="true">https://danfarrelly.com//blog/cloud-skills-gap-focusing-on-the-wrong-problem</guid>
+            <link>https://danfarrelly.com/blog/cloud-skills-gap-focusing-on-the-wrong-problem</link>
+            <guid isPermaLink="true">https://danfarrelly.com/blog/cloud-skills-gap-focusing-on-the-wrong-problem</guid>
             <category><![CDATA[cloud]]></category>
             <category><![CDATA[cloud skills]]></category>
             <category><![CDATA[aws]]></category>
@@ -23,8 +23,8 @@
         <item>
             <title><![CDATA[KubeCon Talk: Kubernetes in Production at Buffer]]></title>
             <description><![CDATA[At KubeCon 2016, I gave a talk about how we started using Kuberentes at Buffer including our learnings along the way.]]></description>
-            <link>https://danfarrelly.com//blog/kubecon-talk-kubernetes-production-buffer</link>
-            <guid isPermaLink="true">https://danfarrelly.com//blog/kubecon-talk-kubernetes-production-buffer</guid>
+            <link>https://danfarrelly.com/blog/kubecon-talk-kubernetes-production-buffer</link>
+            <guid isPermaLink="true">https://danfarrelly.com/blog/kubecon-talk-kubernetes-production-buffer</guid>
             <category><![CDATA[kubecon]]></category>
             <category><![CDATA[kubernetes]]></category>
             <category><![CDATA[containers]]></category>
@@ -35,8 +35,8 @@
         <item>
             <title><![CDATA[How We’re Implementing Service-Oriented Architecture at Buffer After 6 years of Technical Buildup]]></title>
             <description><![CDATA[As Buffer is well into into it’s sixth year of existence, we’ve evolved a lot as an engineering team. Now our architecture is evolving again.]]></description>
-            <link>https://danfarrelly.com//blog/service-oriented-architecture-buffer</link>
-            <guid isPermaLink="true">https://danfarrelly.com//blog/service-oriented-architecture-buffer</guid>
+            <link>https://danfarrelly.com/blog/service-oriented-architecture-buffer</link>
+            <guid isPermaLink="true">https://danfarrelly.com/blog/service-oriented-architecture-buffer</guid>
             <category><![CDATA[service oriented architecture]]></category>
             <category><![CDATA[SOA]]></category>
             <category><![CDATA[kubernetes]]></category>
@@ -46,8 +46,8 @@
         </item>
         <item>
             <title><![CDATA[About]]></title>
-            <link>https://danfarrelly.com//blog/about</link>
-            <guid isPermaLink="true">https://danfarrelly.com//blog/about</guid>
+            <link>https://danfarrelly.com/blog/about</link>
+            <guid isPermaLink="true">https://danfarrelly.com/blog/about</guid>
             <category><![CDATA[dan farrelly]]></category>
             <category><![CDATA[daniel farrelly]]></category>
             <category><![CDATA[inngest]]></category>
