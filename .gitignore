@@ -1,3 +1,6 @@
 node_modules
+blog
 
+index.html
+rss.xml
 .DS_Store
