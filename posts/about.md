@@ -3,11 +3,19 @@
   <img src="/images/about-dan-sasquatch.jpg" alt="Blending in with the locals"/>
 </div>
 
-I'm Dan. I am a founder at [Inngest](https://www.inngest.com) and spent previous several years as CTO at [Buffer](https://buffer.com). Back when I had more time I built [Timezone.io](https://timezone.io) (service, [open-source](https://github.com/timezoneio/timezoneio)) and [MailDev](https://maildev.github.io/maildev/) (dev tool, [open-source](https://github.com/maildev/maildev)).
+I'm Dan. I am the CTO & co-founder at [Inngest](https://www.inngest.com) and spent previous several years as CTO at [Buffer](https://buffer.com). Back when I had more time, I built [Timezone.io](https://timezone.io) (service, [open-source](https://github.com/timezoneio/timezoneio)) and [MailDev](https://maildev.github.io/maildev/) (dev tool, [open-source](https://github.com/maildev/maildev)).
 
 In 2020 I bought a 96 year old house and started [a restoration and renovation project](https://www.instagram.com/michigancraftsman/) on the weekends. Hit me up if you want to chat home renovations.
 
 You can email me if you'd like at dan\[at\]inngest.com.
+
+## Press
+
+- TechCrunch - July 2023 - [_"Inngest helps developers build their back-end workflows, raises $3M"_](https://techcrunch.com/2023/07/12/inngest-helps-developers-build-their-backend-workflows-raises-3m/)
+
+## Podcasts
+
+- Founder Real Talk - July 2023 - [Chat with Glenn Solomon & Dan Cahana at GGV Capital about Inngest](https://open.spotify.com/episode/2bufnBEcTtJq9r94tmaFEA)
 
 ## Speaking
 
