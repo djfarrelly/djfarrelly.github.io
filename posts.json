@@ -1,5 +1,20 @@
 [
   {
+    "title": "The Principles of Durable Execution Explained",
+    "slug": "principles-of-durable-execution",
+    "canonical": "https://inngest.com/blog/principles-of-durable-execution",
+    "canonical_source": "Inngest Blog",
+    "date": "2024-12-10",
+    "description": "What Durable Execution is, how it works, and why it's beneficial to your system.",
+    "tags": [
+      "durable execution",
+      "durable workflows",
+      "inngest",
+      "step functions",
+      "durable functions"
+    ]
+  },
+  {
     "title": "Cloud skills gap - focusing on the wrong problem",
     "slug": "cloud-skills-gap-focusing-on-the-wrong-problem",
     "date": "2022-11-03",

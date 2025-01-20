@@ -6,6 +6,7 @@
   "scripts": {
     "build": "./node_modules/babel-cli/bin/babel-node.js ./index.js",
     "watch": "nodemon --exec 'npm run build' -e 'js,jsx,json,md' & npm run css-watch",
+    "server": "npx httpster -p 8080 -d ./",
     "css": "./node_modules/stylus/bin/stylus -c css/style.styl -o css/style.css",
     "css-watch": "./node_modules/stylus/bin/stylus -c -w css/style.styl -o css/style.css"
   },

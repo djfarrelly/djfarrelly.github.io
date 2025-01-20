@@ -19,12 +19,13 @@ class Post extends React.Component {
       author: AUTHOR,
       publisher: AUTHOR
     };
+    const canonical = this.props.canonical || getFullPostUrl(this.props);
     const title = `${this.props.title} - Dan Farrelly`
     return (
       <html>
         <Head>
           <title>{title}</title>
-          <link rel="canonical" href={getFullPostUrl(this.props)}/>
+          <link rel="canonical" href={canonical}/>
           <meta property="og:title" content={this.props.title} />
           <meta property="og:url" content={getFullPostUrl(this.props)} />
           <meta property="og:description" content={this.props.description} />
@@ -46,6 +47,11 @@ class Post extends React.Component {
                 </p>
               )}
             </div>
+            {canonical && (
+              <div className="post-canonical">
+                <em>This article was originally posted on the <a href={canonical}>{this.props.canonical_source}</a>.</em>
+              </div>
+            )}
             <div
               className="post-body"
               dangerouslySetInnerHTML={{ __html: this.props.html }}
