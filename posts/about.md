@@ -14,14 +14,13 @@ page: true
   <img src="/images/about-dan-sasquatch.jpg" alt="Blending in with the locals"/>
 </div>
 
-I'm Dan. I am a co-founder and CTO at [Inngest](https://www.inngest.com). I spent previous several years as CTO at [Buffer](https://buffer.com). Back when I had more time I built [Timezone.io](https://timezone.io) (service, [open-source](https://github.com/timezoneio/timezoneio)) and [MailDev](https://maildev.github.io/maildev/) (dev tool, [open-source](https://github.com/maildev/maildev)).
+I'm Dan. I am a co-founder and CTO at [Inngest](https://www.inngest.com). I spent the previous several years as CTO at [Buffer](https://buffer.com). Back when I had more time I built [MailDev](https://maildev.github.io/maildev/) (dev tool, [open-source](https://github.com/maildev/maildev) and Timezone.io (saas, [open-source](https://github.com/timezoneio/timezoneio)).
 
 In 2020 I bought a 96 year old house and started [a restoration and renovation project](https://www.instagram.com/michigancraftsman/) on the weekends. Hit me up if you want to chat home renovations.
 
-You can email me if you'd like at dan\[at\]inngest.com.
-
 ## Speaking
 
+- **AI Engineer World's Fair** - Jul 2026 - _"Your agent architecture has a half-life of 6 months"_ ([video](https://www.youtube.com/watch?v=X1kp-ABIIxQ), [article](https://danfarrelly.com/blog/your-agent-architecture-has-a-half-life/))
 - **Squiggle Conf** (Workshop) - Oct 2024 - _"Building Resilient Applications with Durable Execution"_
 - **Epic Web Conf** - Mar 2024 - _"Improve performance and reliability of your API with events and background functions"_ ([video](https://www.epicweb.dev/talks/improve-performance-and-reliability-of-your-api-with-events-and-background-functions))
 - **AsyncAPI Conf** - Nov 2022 - _"An Auto-Documenting Event-Driven Architecture Using Async API and Inngest"_ ([slides](https://www.slideshare.net/DanFarrelly/an-autodocumenting-eventdriven-architecture-using-async-api-and-inngest-asyncapi-conf))
@@ -34,6 +33,9 @@ You can email me if you'd like at dan\[at\]inngest.com.
 
 ## Interviews
 
+- **First Pass w/ Jamin Ball of Altimeter** - Jul 2026 - [A discussion on Loop Engineering](https://x.com/jaminball/status/2072318817100026223?s=20) ([youtube](https://www.youtube.com/watch?v=1YpBSgZLWvs))
+- **Bry Learns AI** - Jun 2026 [What is an AI Agent](https://www.youtube.com/watch?v=F4Wd-6uN_UQ)
+- **CodeTV w/ Jason Lengstorf** - Jan 2026 - [How to connect everything to everything with Inngest](https://www.youtube.com/watch?v=yY6nFudCUjk)
 - **devtools.fm** (Podcast) - Jun 2024 - [Inngest, Easy Asynchronous Workflows](https://www.youtube.com/watch?v=iSgrCnk82Jw)
 - **Founder Real Talk** (Podcast) - [Embracing Feedback from Early Customers](https://open.spotify.com/episode/2bufnBEcTtJq9r94tmaFEA?si=6zhIcIxHR9K_Mx4ws-gpoA)
 - **MongoDB Blog** - Apr 2021 - [_"Built with MongoDB: Buffer"_](https://www.mongodb.com/blog/post/built-mongodb-buffer)
