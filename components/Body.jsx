@@ -1,8 +1,8 @@
 import GA from "./GA.jsx";
 
 const PROJECTS = [
-  { name: "Inngest", url: "https://www.inngest.com" },
-  { name: "MailDev", url: "https://maildev.github.io/maildev/" },
+  { name: "Inngest", url: "https://www.inngest.com", stars: "5.7k" },
+  { name: "MailDev", url: "https://maildev.github.io/maildev/", stars: "6k" },
   { name: "Timezone.io", url: "https://github.com/timezoneio/timezoneio" },
 ];
 
@@ -15,11 +15,12 @@ const SOCIAL = [
 const LinkList = ({ label, links }) => (
   <ul className="site-nav">
     <li>{label}</li>
-    {links.map(({ name, url }) => (
+    {links.map(({ name, url, stars }) => (
       <li key={url}>
         <a href={url} target="_blank">
           {name}
         </a>
+        {stars ? <span class="stars">(⭐︎ {stars})</span> : null}
       </li>
     ))}
   </ul>

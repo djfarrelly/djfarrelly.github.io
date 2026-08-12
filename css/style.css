@@ -188,6 +188,10 @@ thead th {
 .site-nav li:nth-of-type(6n + 5) { --nav-item: 5; }
 .site-nav li:nth-of-type(6n + 6) { --nav-item: 6; }
 
+.site-nav .stars {
+  margin-left: 0.5rem;
+}
+
 .site-nav-container {
   margin: 2rem var(--side-margin);
 }
