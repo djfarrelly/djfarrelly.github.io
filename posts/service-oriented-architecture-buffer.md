@@ -1,3 +1,15 @@
+---
+title: "How We’re Implementing Service-Oriented Architecture at Buffer After 6 years of Technical Buildup"
+date: "2016-10-18"
+description: "As Buffer is well into into it’s sixth year of existence, we’ve evolved a lot as an engineering team. Now our architecture is evolving again."
+image: "/images/posts/kubernetes-cluster.png"
+tags:
+  - "service oriented architecture"
+  - "SOA"
+  - "kubernetes"
+  - "buffer"
+---
+
 As [Buffer](https://buffer.com) is well into its sixth year of existence, we’ve evolved a lot as an
 engineering team. When I joined the team in early 2014, we were six engineers, four of whom worked
 on our main web application and API specifically. We’re now a larger team of 27 engineers, many of

@@ -1,3 +1,19 @@
+---
+title: "Background agents are here. Your orchestration isn't ready."
+date: "2026-05-08"
+description: "Every six months, the \"right\" way to build an AI agent changes. How can you design for the next rewrite?"
+canonical: "https://x.com/djfarrelly/status/2052779234234380479"
+canonicalSource: "X.com"
+xImpressions: "42k"
+image: "/images/posts/background-agents-are-here-your-orchestration-isnt-ready/featured-image-gold.png"
+tags:
+  - "ai agents"
+  - "background agents"
+  - "orchestration"
+  - "durable execution"
+  - "architecture"
+---
+
 Every six months, the "right" way to build an AI agent changes.
 
 We went from RAG being the consensus and everyone got their vector DBs, then to ReAct. We need virtual memory to solve this 4k context problem! Wait context windows are huge now. Now Anthropic dropped a blog post - we're prompt chaining, routing, creating orchestrator-workers! Context engineering is the real work. We need a browser for this, no MCP is the future. We're building tons of specialized sub-agents with funny human-sounding roles. Nope, models got better, generic agents with great prompts are king. Wow OpenAI jumped on MCP, it's definitely the future. CLIs are it now, MCPs are out. Now we need a sandbox, but how fast can it spin up? We are making software factories. What about syncing context across agents?...

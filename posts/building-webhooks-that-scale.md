@@ -1,3 +1,19 @@
+---
+title: "Building Webhooks That Scale"
+date: "2022-07-27"
+description: "Lessons learned scaling webhooks to millions of requests a day at Buffer."
+canonical: "https://www.inngest.com/blog/building-webhooks-that-scale"
+canonicalSource: "Inngest Blog"
+image: "/images/posts/building-webhooks-that-scale/hero-image.jpg"
+tags:
+  - "webhooks"
+  - "scaling"
+  - "buffer"
+  - "queues"
+  - "idempotency"
+  - "backend"
+---
+
 Webhooks are core to integrating with other software services. Your application can react to external changes rather than having to periodically fetch - it’s a huge productivity and user experience gain.
 
 While it’s easy to get started with webhooks - it’s just HTTP - it’s not as straightforward scaling webhooks beyond low volume usage. From experience scaling webhooks to millions of daily requests at Buffer, I’ve collected what you need to know to scale webhooks beyond initial implementation.

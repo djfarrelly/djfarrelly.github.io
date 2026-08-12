@@ -1,3 +1,17 @@
+---
+title: "The Principles of Durable Execution Explained"
+date: "2024-12-10"
+description: "What Durable Execution is, how it works, and why it's beneficial to your system."
+canonical: "https://www.inngest.com/blog/principles-of-durable-execution"
+canonicalSource: "Inngest Blog"
+tags:
+  - "durable execution"
+  - "durable workflows"
+  - "inngest"
+  - "step functions"
+  - "durable functions"
+---
+
 Long-running jobs, complex workflows, distributed systems, and DAGs are difficult to manage. They often involve managing asynchronous, stateful, and fault-tolerant processes that operate at a large scale.
 
 Developers face many challenges when working with these systems. They need to handle failures, ensure reliability, and maintain observability in distributed environments. Additionally, they often find themselves grappling with concurrency issues while working with suboptimal tooling.

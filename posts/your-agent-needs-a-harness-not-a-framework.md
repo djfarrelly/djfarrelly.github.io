@@ -1,3 +1,19 @@
+---
+title: "Your Agent Needs a Harness, Not a Framework"
+date: "2026-03-03"
+description: "Agent runtimes don't need yet another framework — they need a durable, event-driven harness that connects tools, memory, and models on production-grade infrastructure."
+canonical: "https://x.com/djfarrelly/status/2028556984396452250"
+canonicalSource: "X.com"
+xImpressions: "170k"
+image: "/images/posts/your-agent-needs-a-harness-not-a-framework/featured-image.png"
+tags:
+  - "ai agents"
+  - "agent harness"
+  - "agent frameworks"
+  - "durable execution"
+  - "event-driven"
+---
+
 In every engineering discipline, a harness is the same thing: the layer that connects, protects, and orchestrates components — without doing the work itself. A wiring harness routes signals between an engine, sensors, and dashboard. A test harness provides the scaffolding that makes code repeatable and observable. A safety harness catches you when you fall.
 
 Agent runtimes need the same thing. The LLM is the engine. Tools are the peripherals. Memory is storage. But what connects them? What catches the failure when the LLM times out on iteration five? What prevents two messages from colliding? What routes an event from a webhook to the right handler to the right reply channel?

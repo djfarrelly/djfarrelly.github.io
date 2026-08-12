@@ -1,3 +1,14 @@
+---
+title: "About"
+tags:
+  - "dan farrelly"
+  - "daniel farrelly"
+  - "inngest"
+  - "buffer"
+  - "cto"
+page: true
+---
+
 <div style="display:grid; grid-template-columns:1fr 1fr; gap: 1rem;">
   <img src="/images/about-dan-kitchen.jpg" alt="Building a kitchen"/>
   <img src="/images/about-dan-sasquatch.jpg" alt="Blending in with the locals"/>

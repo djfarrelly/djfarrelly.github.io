@@ -1,3 +1,20 @@
+---
+title: "The Agent Loop Architecture"
+date: "2026-06-18"
+description: "Everyone's asking what a loop is. The question nobody's asking is what runs the loop. Durable orchestration is the execution layer underneath — and it's the foundation of the agent loop architecture."
+canonical: "https://x.com/djfarrelly/status/2067677007140278630"
+canonicalSource: "X.com"
+xImpressions: "575k"
+image: "/images/posts/agent-loop-architecture/featured-image.png"
+tags:
+  - "ai agents"
+  - "agent loop"
+  - "durable execution"
+  - "orchestration"
+  - "agent skills"
+  - "ai engineering"
+---
+
 Everyone's asking "WTF is a loop?" Here's the question nobody's asking: what runs the loop?
 
 The AI discourse has converged on loops as a core primitive of agentic systems. Matt Van Horn traced the [lineage of agent loops](https://x.com/mvanhorn/status/2063865685558903149) from ReAct to tool-use to orchestration loops to loops supervising loops. Addy Osmani broke down the [building blocks inside loops](https://addyosmani.com/blog/loop-engineering/): automations, worktrees, skills, connectors, sub-agents. Van Horn landed on **durability**, arguing that loops which can't survive a restart aren't loops. Osmani's key thread was **orchestration**: design the system that prompts the agent instead of you.

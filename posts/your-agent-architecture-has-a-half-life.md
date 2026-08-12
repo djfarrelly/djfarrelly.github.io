@@ -1,3 +1,19 @@
+---
+title: "Your Agent Architecture Has a Half-Life. Your Execution Layer Shouldn't."
+date: "2026-07-21"
+description: "Every six months, the \"right\" way to build an agent changes. Here's the one layer worth owning — and how to make everything else swappable."
+canonical: "https://www.inngest.com/blog/your-agent-architecture-has-a-half-life"
+canonicalSource: "Inngest Blog"
+image: "/images/posts/your-agent-architecture-has-a-half-life/featured-image-v2.png"
+tags:
+  - "ai agents"
+  - "agent architecture"
+  - "execution layer"
+  - "durable execution"
+  - "orchestration"
+  - "ai engineering"
+---
+
 *This article is adapted from a talk I gave at the AI Engineer World's Fair 2026 in San Francisco.*
 
 <div class="video">

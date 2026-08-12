@@ -1,3 +1,19 @@
+---
+title: "Queues aren't the right abstraction"
+date: "2024-03-28"
+description: "Why you shouldn't directly use message queues in 2024."
+canonical: "https://www.inngest.com/blog/queues-are-no-longer-the-right-abstraction"
+canonicalSource: "Inngest Blog"
+image: "/images/posts/queues-are-no-longer-the-right-abstraction/queues-are-over.png"
+tags:
+  - "message queues"
+  - "sqs"
+  - "durable execution"
+  - "abstractions"
+  - "background jobs"
+  - "distributed systems"
+---
+
 Amazon SQS will be [20 years old](https://aws.amazon.com/about-aws/whats-new/2004/11/03/introducing-the-amazon-simple-queue-service/) later this year. It still offers precisely what it advertises-a [simple queue service](https://aws.amazon.com/sqs/). It's also still great. During Prime Day 2022, SQS handled [over 70 million messages per second at peak](https://aws.amazon.com/blogs/aws/amazon-prime-day-2022-aws-for-the-win/). If you want a queue, this, or other time-tested solutions like RabbitMQ or ActiveMQ, work well.
 
 But you don't want a queue. You want something better.

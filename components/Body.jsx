@@ -1,50 +1,52 @@
-import React from 'react';
-import GA from './GA';
+import GA from "./GA.jsx";
 
-class Body extends React.Component {
-  render() {
-    return (
-      <body>
-        <header className="site-header">
-          <a href="/" className="site-home-link">
-            <h1 className="site-title">
-              Dan Farrelly
-            </h1>
-          </a>
-        </header>
-        <div className="site-content">
-          {this.props.children}
-        </div>
-        <footer className="site-header">
-          <p
-            className="site-title"
-            style={{ display: this.props.hideFooterName && 'none' }}
-          >
-            Dan Farrelly
-          </p>
-          <nav className="site-nav-container">
-            <ul className="site-nav">
-              <li><a href="/blog/about">About</a></li>
-            </ul>
-            <ul className="site-nav">
-              <li>Projects:</li>
-              <li><a href="https://www.inngest.com" target="_blank">Inngest</a></li>
-              <li><a href="https://maildev.github.io/maildev/" target="_blank">MailDev</a></li>
-              <li><a href="https://github.com/timezoneio/timezoneio" target="_blank">Timezone.io</a></li>
-            </ul>
-            <ul className="site-nav">
-              <li>Social:</li>
-              <li><a href="https://bsky.app/profile/danfarrelly.com" target="_blank">Bluesky</a></li>
-              <li><a href="https://github.com/djfarrelly" target="_blank">Github</a></li>
-              <li><a href="https://x.com/djfarrelly" target="_blank">X</a></li>
-              <li><a href="https://www.linkedin.com/in/djfarrelly/" target="_blank">Linkedin</a></li>
-            </ul>
-          </nav>
-        </footer>
-        <GA />
-      </body>
-    );
-  }
+const PROJECTS = [
+  { name: "Inngest", url: "https://www.inngest.com" },
+  { name: "MailDev", url: "https://maildev.github.io/maildev/" },
+  { name: "Timezone.io", url: "https://github.com/timezoneio/timezoneio" },
+];
+
+const SOCIAL = [
+  { name: "X", url: "https://x.com/djfarrelly" },
+  { name: "Github", url: "https://github.com/djfarrelly" },
+  { name: "Linkedin", url: "https://www.linkedin.com/in/djfarrelly/" },
+];
+
+const LinkList = ({ label, links }) => (
+  <ul className="site-nav">
+    <li>{label}</li>
+    {links.map(({ name, url }) => (
+      <li key={url}>
+        <a href={url} target="_blank">
+          {name}
+        </a>
+      </li>
+    ))}
+  </ul>
+);
+
+export default function Body({ children, hideFooterName = false }) {
+  return (
+    <body>
+      <header className="site-header">
+        <a href="/" className="site-home-link">
+          <h1 className="site-title">Dan Farrelly</h1>
+        </a>
+      </header>
+      <div className="site-content">{children}</div>
+      <footer className="site-header">
+        {!hideFooterName && <p className="site-title">Dan Farrelly</p>}
+        <nav className="site-nav-container">
+          <ul className="site-nav">
+            <li>
+              <a href="/blog/about/">About</a>
+            </li>
+          </ul>
+          <LinkList label="Projects:" links={PROJECTS} />
+          <LinkList label="Social:" links={SOCIAL} />
+        </nav>
+      </footer>
+      <GA />
+    </body>
+  );
 }
-
-export default Body;

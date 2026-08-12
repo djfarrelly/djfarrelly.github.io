@@ -1,3 +1,16 @@
+---
+title: "Cloud skills gap - focusing on the wrong problem"
+date: "2022-11-03"
+description: "There have been a couple recent posts that I've read about the cloud skills gap including some conversations on Twitter that I think are focusing on the wrong problem."
+tags:
+  - "cloud"
+  - "cloud skills"
+  - "aws"
+  - "cloud infra"
+  - "gcp"
+  - "devops"
+---
+
 There have been a [couple](https://cloudpundit.com/2022/09/12/cloud-adoption-will-fail-because-of-the-skills-gap/) [recent](https://www.jeremydaly.com/lets-talk-about-the-cloud-skills-gap/) posts that I've read about the cloud skills gap including some conversations on Twitter that I think are focusing on the wrong problem.
 
 It's not that I'm saying there _isn't_ a cloud skills gap - there likely is. It's that we _don't_ need to solve this issue by skilling up more devs to understand how to wrangle AWS and GCP with [Terraform](https://www.terraform.io/) or worse - _Cloudformation_. Developers need better solutions.

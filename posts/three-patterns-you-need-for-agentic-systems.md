@@ -1,3 +1,19 @@
+---
+title: "Three sub-agent patterns you need for your agentic system"
+date: "2026-03-11"
+description: "Every agentic system that actually ships ends up needing three delegation patterns: one that blocks, one that fires and forgets, and one that runs later."
+canonical: "https://x.com/djfarrelly/status/2031838984813297748"
+canonicalSource: "X.com"
+xImpressions: "59k"
+image: "/images/posts/three-patterns-you-need-for-agentic-systems/blog-banner.png"
+tags:
+  - "ai agents"
+  - "sub-agents"
+  - "agentic systems"
+  - "delegation patterns"
+  - "orchestration"
+---
+
 **Every agentic system that actually ships ends up needing three delegation patterns: one that blocks, one that fires and forgets, and one that runs later. The question isn't whether you need sub-agents — it's how you wire them up.**
 
 Sub-agents unlock a few key things that matter in agentic systems: context compression, parallel execution, and async delegation. A parent agent that can hand off work to isolated sub-agents stays lean across long conversations, runs independent tasks simultaneously, and delegates background work without blocking the user.

@@ -2,11 +2,15 @@
   "name": "danfarrelly.com",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "build.js",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "build": "./node_modules/babel-cli/bin/babel-node.js ./index.js",
-    "watch": "nodemon --exec 'pnpm run build' -e 'js,jsx,json,md'",
-    "server": "pnpm dlx httpster -p 8080 -d ./"
+    "build": "node --import tsx ./build.js",
+    "watch": "node --watch-path=./build.js --watch-path=./components --watch-path=./lib --watch-path=./posts --watch-path=./css --import tsx ./build.js",
+    "serve": "pnpm dlx serve -l 8080 ."
   },
   "repository": {
     "type": "git",
@@ -18,20 +22,20 @@
     "url": "https://github.com/djfarrelly/djfarrelly.github.io/issues"
   },
   "homepage": "https://github.com/djfarrelly/djfarrelly.github.io#readme",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
   "dependencies": {
-    "async": "^2.0.0-rc.5",
-    "babel-cli": "^6.9.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.8.0",
-    "babel-preset-react": "^6.5.0",
-    "express": "4.14.0",
-    "marked": "^0.3.5",
-    "mkdirp": "^0.5.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rss": "1.2.1"
+    "marked": "^18.0.9",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tsx": "^4.23.12",
+    "yaml": "^2.9.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  },
-  "packageManager": "pnpm@10.27.0+sha512.72d699da16b1179c14ba9e64dc71c9a40988cbdc65c264cb0e489db7de917f20dcf4d64d8723625f2969ba52d4b7e2a1170682d9ac2a5dcaeaab732b7e16f04a"
+  "packageManager": "pnpm@10.27.0+sha512.72d699da16b1179c14ba9e64dc71c9a40988cbdc65c264cb0e489db7de917f20dcf4d64d8723625f2969ba52d4b7e2a1170682d9ac2a5dcaeaab732b7e16f04a",
+  "volta": {
+    "node": "24.14.0"
+  }
 }
