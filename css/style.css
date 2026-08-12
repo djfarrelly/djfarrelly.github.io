@@ -17,8 +17,17 @@
   --side-margin: 2em;
   --max-width: 40em;
 
-  --nav-animation-base: 2000ms;
-  --nav-animation-delta: 500ms;
+  --fade-duration: 300ms;
+  --fade-easing: cubic-bezier(0.16, 1, 0.3, 1);
+  --fade-offset: 6px;
+
+  /* The nav stagger must finish inside --fade-duration. On a cross-document
+     navigation these animations are created fresh as the transition starts,
+     and the view transition restores their real timing when it ends -- so
+     anything still mid-flight at that point visibly snaps backwards.
+     Budget: (5 * delta) + nav-fade-duration = 290ms < 300ms. */
+  --nav-fade-duration: 180ms;
+  --nav-animation-delta: 22ms;
 }
 
 /* Base */
@@ -125,9 +134,97 @@ thead th {
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translate3d(0, var(--fade-offset), 0);
   }
   to {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Page transitions
+
+   Cross-document view transitions, so navigating between pages crossfades
+   instead of hard-cutting. Progressive enhancement: unsupported browsers
+   just navigate normally and fall back to the entry animations below.
+
+   The header and footer are identical on every page, so they stay in the
+   root snapshot where the crossfade between two near-identical images is
+   imperceptible. Only .site-content gets its own group, so the part that
+   actually changes is the part that visibly animates. */
+
+@view-transition {
+  navigation: auto;
+}
+
+.site-content {
+  view-transition-name: site-content;
+}
+
+::view-transition-group(root),
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--fade-duration);
+  animation-timing-function: var(--fade-easing);
+}
+
+/* Pages have different content heights, so the group morphs its size.
+   Keep that on the same clock as the fades or it drifts out of sync. */
+::view-transition-group(site-content) {
+  animation-duration: var(--fade-duration);
+  animation-timing-function: var(--fade-easing);
+}
+
+/* Sequential, not overlapping. Overriding `animation` here drops the UA's
+   mix-blend-mode: plus-lighter, so any overlap composites two different
+   blocks of text source-over and the old text ghosts through the new.
+   Out then in, splitting --fade-duration between them. */
+::view-transition-old(site-content) {
+  animation: fadeOut calc(var(--fade-duration) * 0.35) ease-out both;
+}
+
+::view-transition-new(site-content) {
+  animation: fadeIn calc(var(--fade-duration) * 0.65) var(--fade-easing) both;
+  animation-delay: calc(var(--fade-duration) * 0.35);
+}
+
+/* The entry animations exist for cold loads. During a view transition the
+   transition itself does the fading, so neutralize them.
+
+   Zero the timing rather than setting `animation: none`. Removing the name
+   destroys the animation, and when this rule stops matching at the end of
+   the transition the browser creates a fresh one that replays from opacity
+   0 -- the whole page visibly re-fades. Keeping the name alive means the
+   same animation object persists in its finished state, so restoring the
+   duration afterwards is a no-op. The delay has to go too: with
+   `fill-mode: both` a still-delayed animation pins the element at opacity
+   0 for up to 180ms. */
+html:active-view-transition .site-content,
+html:active-view-transition .site-nav li {
+  animation-duration: 0s;
+  animation-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
+  *,
+  *::before,
+  *::after,
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 1ms !important;
   }
 }
 
@@ -177,8 +274,8 @@ thead th {
   transition: all 200ms ease-in-out;
 
   /* Staggered fade in, cycling every 6 items */
-  animation: fadeIn
-    calc(var(--nav-animation-base) + var(--nav-item) * var(--nav-animation-delta));
+  animation: fadeIn var(--nav-fade-duration) var(--fade-easing) both;
+  animation-delay: calc(var(--nav-item) * var(--nav-animation-delta));
 }
 
 .site-nav li:nth-of-type(6n + 1) { --nav-item: 1; }
@@ -201,7 +298,7 @@ thead th {
   max-width: var(--max-width);
   margin: 0 auto;
   font-size: 18px;
-  animation: fadeIn 2s;
+  animation: fadeIn var(--fade-duration) var(--fade-easing) both;
 }
 
 .site-content img {
