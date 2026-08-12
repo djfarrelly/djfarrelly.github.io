@@ -1,10 +1,11 @@
 import React from 'react';
 import Head from './Head';
 import Body from './Body';
-import { formatDate, getFullPostUrl } from '../lib/utils';
+import { formatDate, getFullPostUrl, getFullImageUrl } from '../lib/utils';
 
 class Post extends React.Component {
   render() {
+    const image = getFullImageUrl(this.props.image);
     const AUTHOR = {
       "@type": "Person",
       name: "Dan Farrelly"
@@ -15,7 +16,7 @@ class Post extends React.Component {
       url: getFullPostUrl(this.props),
       headline: this.props.title,
       datePublished: this.props.date,
-      image: this.props.image,
+      image: image,
       author: AUTHOR,
       publisher: AUTHOR
     };
@@ -29,9 +30,9 @@ class Post extends React.Component {
           <meta property="og:title" content={this.props.title} />
           <meta property="og:url" content={getFullPostUrl(this.props)} />
           <meta property="og:description" content={this.props.description} />
-          {!!this.props.image && <meta property="og:image" content={this.props.image} />}
+          {!!image && <meta property="og:image" content={image} />}
           <meta property="og:type" content='article' />
-          <meta property="og:article:author" content='https://www.facebook.com/danfarrelly' />
+          <meta property="og:article:author" content='https://danfarrelly.com/' />
           <meta name="twitter:card" content="summary"></meta>
           <meta name="twitter:creator" content="@djfarrelly" />
         </Head>
@@ -49,7 +50,7 @@ class Post extends React.Component {
             </div>
             {canonical && (
               <div className="post-canonical">
-                <em>This article was originally posted on the <a href={canonical}>{this.props.canonical_source}</a>.</em>
+                <em>This article was originally posted on the <a href={canonical}>{this.props.canonical_source}</a> {this.props.x_impressions ? `(${this.props.x_impressions}+ views)` : ''}.</em>
               </div>
             )}
             <div

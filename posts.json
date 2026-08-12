@@ -1,5 +1,91 @@
 [
   {
+    "title": "Your Agent Architecture Has a Half-Life. Your Execution Layer Shouldn't.",
+    "slug": "your-agent-architecture-has-a-half-life",
+    "canonical": "https://www.inngest.com/blog/your-agent-architecture-has-a-half-life",
+    "canonical_source": "Inngest Blog",
+    "date": "2026-07-21",
+    "description": "Every six months, the \"right\" way to build an agent changes. Here's the one layer worth owning — and how to make everything else swappable.",
+    "image": "/images/posts/your-agent-architecture-has-a-half-life/featured-image-v2.png",
+    "tags": [
+      "ai agents",
+      "agent architecture",
+      "execution layer",
+      "durable execution",
+      "orchestration",
+      "ai engineering"
+    ]
+  },
+  {
+    "title": "The Agent Loop Architecture",
+    "slug": "agent-loop-architecture",
+    "canonical": "https://x.com/djfarrelly/status/2067677007140278630",
+    "canonical_source": "X.com",
+    "x_impressions": "575k",
+    "date": "2026-06-18",
+    "description": "Everyone's asking what a loop is. The question nobody's asking is what runs the loop. Durable orchestration is the execution layer underneath — and it's the foundation of the agent loop architecture.",
+    "image": "/images/posts/agent-loop-architecture/featured-image.png",
+    "tags": [
+      "ai agents",
+      "agent loop",
+      "durable execution",
+      "orchestration",
+      "agent skills",
+      "ai engineering"
+    ]
+  },
+  {
+    "title": "Background agents are here. Your orchestration isn't ready.",
+    "slug": "background-agents-are-here-your-orchestration-isnt-ready",
+    "canonical": "https://x.com/djfarrelly/status/2052779234234380479",
+    "canonical_source": "X.com",
+    "x_impressions": "42k",
+    "date": "2026-05-08",
+    "description": "Every six months, the \"right\" way to build an AI agent changes. How can you design for the next rewrite?",
+    "image": "/images/posts/background-agents-are-here-your-orchestration-isnt-ready/featured-image-gold.png",
+    "tags": [
+      "ai agents",
+      "background agents",
+      "orchestration",
+      "durable execution",
+      "architecture"
+    ]
+  },
+  {
+    "title": "Three sub-agent patterns you need for your agentic system",
+    "slug": "three-patterns-you-need-for-agentic-systems",
+    "canonical": "https://x.com/djfarrelly/status/2031838984813297748",
+    "canonical_source": "X.com",
+    "x_impressions": "59k",
+    "date": "2026-03-11",
+    "description": "Every agentic system that actually ships ends up needing three delegation patterns: one that blocks, one that fires and forgets, and one that runs later.",
+    "image": "/images/posts/three-patterns-you-need-for-agentic-systems/blog-banner.png",
+    "tags": [
+      "ai agents",
+      "sub-agents",
+      "agentic systems",
+      "delegation patterns",
+      "orchestration"
+    ]
+  },
+  {
+    "title": "Your Agent Needs a Harness, Not a Framework",
+    "slug": "your-agent-needs-a-harness-not-a-framework",
+    "canonical": "https://x.com/djfarrelly/status/2028556984396452250",
+    "canonical_source": "X.com",
+    "x_impressions": "170k",
+    "date": "2026-03-03",
+    "description": "Agent runtimes don't need yet another framework — they need a durable, event-driven harness that connects tools, memory, and models on production-grade infrastructure.",
+    "image": "/images/posts/your-agent-needs-a-harness-not-a-framework/featured-image.png",
+    "tags": [
+      "ai agents",
+      "agent harness",
+      "agent frameworks",
+      "durable execution",
+      "event-driven"
+    ]
+  },
+  {
     "title": "The Principles of Durable Execution Explained",
     "slug": "principles-of-durable-execution",
     "canonical": "https://www.inngest.com/blog/principles-of-durable-execution",
@@ -15,11 +101,62 @@
     ]
   },
   {
+    "title": "Fixing noisy neighbor problems in multi-tenant queueing systems",
+    "slug": "fixing-multi-tenant-queueing-concurrency-problems",
+    "canonical": "https://www.inngest.com/blog/fixing-multi-tenant-queueing-concurrency-problems",
+    "canonical_source": "Inngest Blog",
+    "date": "2024-06-28",
+    "description": "Ensuring fairness and consistent performance for all users with concurrency controls.",
+    "image": "/images/posts/fixing-multi-tenant-queueing-concurrency-problems/featured-image-v2.png",
+    "tags": [
+      "queueing",
+      "multi-tenant",
+      "noisy neighbor",
+      "concurrency",
+      "fairness",
+      "distributed systems"
+    ]
+  },
+  {
+    "title": "Queues aren't the right abstraction",
+    "slug": "queues-are-no-longer-the-right-abstraction",
+    "canonical": "https://www.inngest.com/blog/queues-are-no-longer-the-right-abstraction",
+    "canonical_source": "Inngest Blog",
+    "date": "2024-03-28",
+    "description": "Why you shouldn't directly use message queues in 2024.",
+    "image": "/images/posts/queues-are-no-longer-the-right-abstraction/queues-are-over.png",
+    "tags": [
+      "message queues",
+      "sqs",
+      "durable execution",
+      "abstractions",
+      "background jobs",
+      "distributed systems"
+    ]
+  },
+  {
     "title": "Cloud skills gap - focusing on the wrong problem",
     "slug": "cloud-skills-gap-focusing-on-the-wrong-problem",
     "date": "2022-11-03",
     "description": "There have been a couple recent posts that I've read about the cloud skills gap including some conversations on Twitter that I think are focusing on the wrong problem.",
     "tags": ["cloud", "cloud skills", "aws", "cloud infra", "gcp", "devops"]
+  },
+  {
+    "title": "Building Webhooks That Scale",
+    "slug": "building-webhooks-that-scale",
+    "canonical": "https://www.inngest.com/blog/building-webhooks-that-scale",
+    "canonical_source": "Inngest Blog",
+    "date": "2022-07-27",
+    "description": "Lessons learned scaling webhooks to millions of requests a day at Buffer.",
+    "image": "/images/posts/building-webhooks-that-scale/hero-image.jpg",
+    "tags": [
+      "webhooks",
+      "scaling",
+      "buffer",
+      "queues",
+      "idempotency",
+      "backend"
+    ]
   },
   {
     "title": "KubeCon Talk: Kubernetes in Production at Buffer",
