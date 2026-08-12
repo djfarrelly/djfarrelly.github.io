@@ -1,6 +1,14 @@
 # danfarrelly.com
 
+pnpm is pinned via corepack, so enable it once:
+
 ```
-npm i
-npm run build
+corepack enable
+```
+
+Then:
+
+```
+pnpm i
+pnpm build
 ```
