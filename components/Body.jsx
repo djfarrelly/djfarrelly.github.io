@@ -36,7 +36,11 @@ export default function Body({ children, hideFooterName = false }) {
       </header>
       <div className="site-content">{children}</div>
       <footer className="site-header">
-        {!hideFooterName && <p className="site-title">Dan Farrelly</p>}
+        {!hideFooterName && (
+          <a href="/" className="site-home-link">
+            <h1 className="site-title">Dan Farrelly</h1>
+          </a>
+        )}
         <nav className="site-nav-container">
           <ul className="site-nav">
             <li>

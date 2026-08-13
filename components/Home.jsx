@@ -33,9 +33,6 @@ const PostSummary = ({ post }) => {
         </p>
       </div>
       <p itemProp="description">{post.description}</p>
-      <p>
-        <a href={url}>Read more...</a>
-      </p>
     </div>
   );
 };
