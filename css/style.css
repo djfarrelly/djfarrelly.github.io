@@ -88,9 +88,14 @@ small {
 }
 
 pre {
-  padding: 0.5em 1em;
+  padding: 1rem 1.2rem;
   background: var(--pre-background);
-  font-size: 16px;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  line-height: 1.4em;
+  /* Long lines scroll the block instead of the page. Shiki's <pre> carries
+     tabindex="0" so the overflow stays keyboard-reachable. */
+  overflow-x: auto;
 }
 
 blockquote {

@@ -3,6 +3,7 @@ import path from "node:path";
 import { marked } from "marked";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { createHighlighter } from "shiki";
 
 import Home from "./components/Home.jsx";
 import Post from "./components/Post.jsx";
@@ -10,6 +11,17 @@ import { parseFrontmatter } from "./lib/frontmatter.js";
 import { renderFeed } from "./lib/feed.js";
 
 const POSTS_DIR = "posts";
+const THEME = "github-light";
+
+// Shiki bakes the colors in as inline styles at build time, so highlighting
+// costs the reader no CSS and no JS. Creating the highlighter is the only async
+// part -- codeToHtml itself is sync, which is what marked.parse needs. Add a
+// language here before using it in a fence; unlisted ones render unhighlighted.
+const highlighter = await createHighlighter({
+  themes: [THEME],
+  langs: ["typescript", "tsx", "python"],
+});
+const languages = new Set(highlighter.getLoadedLanguages());
 
 // Renderer methods receive a token, not positional args.
 marked.use({
@@ -30,6 +42,19 @@ marked.use({
         .replace(/[^\w]+/g, "-")
         .replace(/^-|-$/g, "");
       return `<h${token.depth} id="${id}">${text}</h${token.depth}>\n`;
+    },
+    // Returning false falls through to marked's plain <pre><code>, which keeps
+    // fences with no (or an unloaded) language looking like they always have.
+    code(token) {
+      const lang = token.lang?.trim().split(/\s+/)[0];
+      if (!lang || !languages.has(lang)) return false;
+      return highlighter.codeToHtml(token.text, {
+        lang,
+        theme: THEME,
+        // The theme's background is #fff; no token color in it is, so this only
+        // repaints the block to match an unhighlighted <pre>.
+        colorReplacements: { "#fff": "#f0f5f9" },
+      });
     },
   },
 });

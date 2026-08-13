@@ -5,28 +5,19 @@ to plain HTML. No client-side JS, no bundler.
 
 ## Setup
 
-Node is pinned via [Volta](https://volta.sh) (the `volta` field in
-`package.json`), so it switches automatically in this directory. pnpm is pinned
-via corepack, so enable it once:
-
 ```
 corepack enable
-```
-
-Then:
-
-```
 pnpm i
 pnpm build
 ```
 
 ## Scripts
 
-| Command | Description |
-| --- | --- |
+| Command      | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
 | `pnpm build` | Render `index.html`, `blog/<slug>/index.html`, and `rss.xml` |
-| `pnpm watch` | Rebuild on changes to posts, components, lib, or CSS |
-| `pnpm serve` | Serve the built site at http://localhost:8080 |
+| `pnpm watch` | Rebuild on changes to posts, components, lib, or CSS         |
+| `pnpm serve` | Serve the built site at http://localhost:8080                |
 
 ## Layout
 
