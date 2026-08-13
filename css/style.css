@@ -1,10 +1,14 @@
 :root {
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-size: 18px;
+  /* rem, not px, so a reader who has raised their browser's default font
+     size gets larger text. 1.125rem is 18px at the 16px default. */
+  --font-size: 1.125rem;
   --font-weight: 400;
   --font-weight-bold: 700;
-  --header-line-height: 1.4em;
+  /* Unitless: an em line-height computes to px once and then inherits that
+     px value, so nested text at a different size gets the wrong leading. */
+  --header-line-height: 1.4;
 
   --text-color: rgb(63, 63, 63);
   --text-color-light: rgb(110, 110, 110);
@@ -13,8 +17,14 @@
   --pre-background: #f0f5f9;
   --border-color: rgb(224, 224, 224);
 
-  --vertical-margin: 1em;
-  --side-margin: 2em;
+  /* Layout spacing is rem so it shares one base with the bare rem values
+     used further down -- em here resolved against the 18px body while a
+     sibling rem resolved against the 16px root, so "2" meant two sizes.
+     --max-width stays em on purpose: it is a measure, and resolving it
+     against .site-content's font size keeps the line length tracking the
+     text (including the 16px mobile step). */
+  --vertical-margin: 1rem;
+  --side-margin: 2rem;
   --max-width: 40em;
 
   --fade-duration: 300ms;
@@ -80,7 +90,7 @@ small {
 
 p,
 li {
-  line-height: 1.6em;
+  line-height: 1.6;
 }
 
 small {
@@ -91,8 +101,9 @@ pre {
   padding: 1rem 1.2rem;
   background: var(--pre-background);
   border-radius: 0.5rem;
-  font-size: 14px;
-  line-height: 1.4em;
+  /* Relative to .site-content so code shrinks with prose at the mobile step. */
+  font-size: 0.78em;
+  line-height: 1.4;
   /* Long lines scroll the block instead of the page. Shiki's <pre> carries
      tabindex="0" so the overflow stays keyboard-reachable. */
   overflow-x: auto;
@@ -116,7 +127,7 @@ th,
 td {
   padding: 0.4em 0.8em;
   border-bottom: 1px solid var(--border-color);
-  line-height: 1.6em;
+  line-height: 1.6;
   text-align: left;
   vertical-align: top;
 }
@@ -302,7 +313,7 @@ html:active-view-transition .site-nav li {
   width: 90%;
   max-width: var(--max-width);
   margin: 0 auto;
-  font-size: 18px;
+  font-size: var(--font-size);
   animation: fadeIn var(--fade-duration) var(--fade-easing) both;
 }
 
@@ -326,7 +337,7 @@ html:active-view-transition .site-nav li {
 .post-date,
 .post-canonical {
   margin: 0.5rem 0;
-  font-size: 0.9rem;
+  font-size: 0.8em;
   color: var(--text-color-light);
 }
 
@@ -366,7 +377,7 @@ html:active-view-transition .site-nav li {
 
 @media (max-width: 440px) {
   .site-content {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .post-title {
