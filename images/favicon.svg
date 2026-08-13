@@ -1,0 +1,12 @@
+<!-- DF monogram. Geometric paths rather than <text>, so the letterforms render
+     identically everywhere with no font to load. Drawn on a 64 grid: 32 cap
+     height, 7.5 stroke, 8 margin. The D's bowl and the gap between the F's arms
+     are wider than a typeface would set them, because at 16px tight counters
+     fill in and the letters turn to mush. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#546B41"/>
+  <g fill="#fefaf5" fill-rule="evenodd">
+    <path d="M8,16 H20 A12,16 0 0 1 20,48 H8 Z M15.5,23.5 H20 A4.5,8.5 0 0 1 20,40.5 H15.5 Z"/>
+    <path d="M35,16 H56 V23.5 H42.5 V27.5 H53 V35 H42.5 V48 H35 Z"/>
+  </g>
+</svg>
