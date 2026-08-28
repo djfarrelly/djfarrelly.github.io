@@ -1,10 +1,11 @@
 const CODE = `
-      <script>
-        var _gaq=[['_setAccount','UA-27586336-1'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-      </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPL5HN33SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LPL5HN33SL');
+</script>
     `;
 
 // dangerouslySetInnerHTML is what keeps the <script> tag intact through static
