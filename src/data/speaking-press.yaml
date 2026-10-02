@@ -1,0 +1,176 @@
+# Chronological entries for the Speaking & Press page. `date` is YYYY, YYYY-MM,
+# or YYYY-MM-DD and is optional (undated entries sort last). Types: talk,
+# podcast, interview, press, feature.
+- id: ai-engineer-worlds-fair-2026
+  type: talk
+  title: "Your agent architecture has a half-life of 6 months"
+  source: "AI Engineer World's Fair"
+  date: "2026-07"
+  links:
+    - label: "Video"
+      url: "https://www.youtube.com/watch?v=X1kp-ABIIxQ"
+    - label: "Article"
+      url: "https://danfarrelly.com/blog/your-agent-architecture-has-a-half-life/"
+
+- id: first-pass-jamin-ball-2026
+  type: interview
+  title: "A discussion on Loop Engineering"
+  source: "First Pass w/ Jamin Ball of Altimeter"
+  date: "2026-07"
+  links:
+    - label: "X"
+      url: "https://x.com/jaminball/status/2072318817100026223?s=20"
+    - label: "YouTube"
+      url: "https://www.youtube.com/watch?v=1YpBSgZLWvs"
+
+- id: bry-learns-ai-2026
+  type: interview
+  title: "What is an AI Agent"
+  source: "Bry Learns AI"
+  date: "2026-06"
+  links:
+    - label: "YouTube"
+      url: "https://www.youtube.com/watch?v=F4Wd-6uN_UQ"
+
+- id: codetv-jason-lengstorf-2026
+  type: interview
+  title: "How to connect everything to everything with Inngest"
+  source: "CodeTV w/ Jason Lengstorf"
+  date: "2026-01"
+  links:
+    - label: "YouTube"
+      url: "https://www.youtube.com/watch?v=yY6nFudCUjk"
+
+- id: squiggle-conf-2024
+  type: talk
+  title: "Building Resilient Applications with Durable Execution"
+  source: "Squiggle Conf (Workshop)"
+  date: "2024-10"
+
+- id: epic-web-conf-2024
+  type: talk
+  title: "Improve performance and reliability of your API with events and background functions"
+  source: "Epic Web Conf"
+  date: "2024-03"
+  links:
+    - label: "Video"
+      url: "https://www.epicweb.dev/talks/improve-performance-and-reliability-of-your-api-with-events-and-background-functions"
+
+- id: devtools-fm-2024
+  type: podcast
+  title: "Inngest, Easy Asynchronous Workflows"
+  source: "devtools.fm"
+  date: "2024-06"
+  links:
+    - label: "YouTube"
+      url: "https://www.youtube.com/watch?v=iSgrCnk82Jw"
+
+- id: techcrunch-2024
+  type: press
+  title: "Inngest raises $6.1M as it expands its workflow engine"
+  source: "TechCrunch"
+  date: "2024-01"
+  links:
+    - label: "Read"
+      url: "https://techcrunch.com/2024/01/30/inngest-raises-6-1m-as-it-expands-its-workflow-engine/"
+
+- id: techcrunch-2023
+  type: press
+  title: "Inngest helps developers build their back-end workflows, raises $3M"
+  source: "TechCrunch"
+  date: "2023-07"
+  links:
+    - label: "Read"
+      url: "https://techcrunch.com/2023/07/12/inngest-helps-developers-build-their-backend-workflows-raises-3m/"
+
+- id: asyncapi-conf-2022
+  type: talk
+  title: "An Auto-Documenting Event-Driven Architecture Using AsyncAPI and Inngest"
+  source: "AsyncAPI Conf"
+  date: "2022-11"
+  links:
+    - label: "Slides"
+      url: "https://www.slideshare.net/DanFarrelly/an-autodocumenting-eventdriven-architecture-using-async-api-and-inngest-asyncapi-conf"
+
+- id: reactive-summit-2022
+  type: talk
+  title: "Building a Pluggable, Cloud-native Event-driven Serverless Architecture"
+  source: "Reactive Summit"
+  date: "2022-10"
+  links:
+    - label: "Slides"
+      url: "https://www.slideshare.net/DanFarrelly/building-a-pluggable-cloudnative-eventdriven-serverless-architecture"
+
+- id: mongodb-blog-2021
+  type: press
+  title: "Built with MongoDB: Buffer"
+  source: "MongoDB Blog"
+  date: "2021-04"
+  links:
+    - label: "Read"
+      url: "https://www.mongodb.com/blog/post/built-mongodb-buffer"
+
+- id: increment-magazine-2020
+  type: press
+  title: "Case studies in rearchitecting"
+  source: "Stripe's Increment Magazine"
+  date: "2020-02"
+  links:
+    - label: "Read"
+      url: "https://increment.com/software-architecture/case-studies-in-rearchitecting/"
+
+- id: founder-real-talk
+  type: podcast
+  title: "Embracing Feedback from Early Customers"
+  source: "Founder Real Talk"
+  links:
+    - label: "Listen"
+      url: "https://open.spotify.com/episode/2bufnBEcTtJq9r94tmaFEA?si=6zhIcIxHR9K_Mx4ws-gpoA"
+
+- id: kubernetes-case-study-2017
+  type: press
+  title: "Buffer's infrastructure modernization with Kubernetes"
+  source: "Kubernetes Case Study"
+  date: "2017"
+  links:
+    - label: "Read"
+      url: "https://kubernetes.io/case-studies/buffer/"
+
+- id: mongodb-world-2019
+  type: talk
+  title: "Lessons Learned Migrating Buffer's Production Database to MongoDB Atlas"
+  source: "MongoDB World"
+  date: "2019"
+  links:
+    - label: "Slides"
+      url: "https://www.slideshare.net/mongodb/mongodb-world-2019-lessons-learned-migrating-buffers-production-database-to-mongodb-atlas-from-mongodb-24-buffer"
+
+- id: kubernetes-nyc-2018
+  type: talk
+  title: "Kubernetes at Buffer - 2 years in"
+  source: "Kubernetes NYC Meetup"
+  date: "2018-03"
+  links:
+    - label: "Slides"
+      url: "https://www.slideshare.net/DanFarrelly/kubernetes-at-buffer-2-years-in"
+
+- id: kubecon-2016
+  type: talk
+  title: "How Kubernetes Was the Secret Sauce in Our Globally Distributed Team's Transition to Microservices"
+  source: "KubeCon"
+  date: "2016-11"
+  links:
+    - label: "YouTube"
+      url: "https://www.youtube.com/watch?v=EC_ZRLsw58M"
+
+- id: docker-nyc-2016
+  type: talk
+  title: "Using Docker to develop Node.js Microservices"
+  source: "Docker NYC Meetup"
+  date: "2016-10"
+
+- id: kubernetes-cloud-native-nyc-2016
+  type: talk
+  title: "How Kubernetes was the ideal match in our globally distributed team's transition to microservices"
+  source: "Kubernetes and Cloud Native New York Meetup"
+  date: "2016-10"

@@ -1,6 +1,4 @@
-node_modules
-blog
-
-index.html
-rss.xml
+node_modules/
+dist/
+.astro/
 .DS_Store

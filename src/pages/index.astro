@@ -1,0 +1,90 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { formatDate, getPostUrl } from "../lib/format.js";
+
+const DESCRIPTION =
+  "Co-founder and CTO at Inngest. Formerly CTO at Buffer. Writing about event-driven architecture, durable execution, and building AI agent systems.";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft))
+  .sort((a, b) => (b.data.date ?? "").localeCompare(a.data.date ?? ""))
+  .slice(0, 5);
+---
+
+<BaseLayout
+  title="Dan Farrelly"
+  description={DESCRIPTION}
+  googleSiteVerification="MKYWJyvqSUEJDS-W42zXoEUZOggAoyKsobl6XU6-uCw"
+>
+  <section class="py-12 sm:py-16">
+    <img
+      src="/images/about-dan-sasquatch.jpg"
+      alt="Dan Farrelly"
+      width="96"
+      height="96"
+      class="size-24 rounded-full object-cover ring-1 ring-line"
+    />
+    <h1 class="mt-6 text-4xl font-bold tracking-tight">Dan Farrelly</h1>
+    <p class="mt-4 max-w-prose text-lg leading-relaxed text-ink">
+      {DESCRIPTION}
+    </p>
+  </section>
+
+  <section>
+    <h2 class="text-sm font-bold uppercase tracking-widest text-muted">
+      Latest writing
+    </h2>
+    <ul class="mt-4 divide-y divide-line">
+      {
+        posts.map((post) => (
+          <li class="py-5">
+            <a href={getPostUrl(post.id)} class="group block">
+              <h3 class="font-semibold leading-snug transition-colors group-hover:text-accent">
+                {post.data.title}
+              </h3>
+              <p class="mt-1 text-sm text-muted">
+                <time dateTime={post.data.date}>{formatDate(post.data.date)}</time>
+              </p>
+              {post.data.description && (
+                <p class="mt-2 text-sm leading-relaxed text-muted">
+                  {post.data.description}
+                </p>
+              )}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="mt-6">
+      <a
+        href="/rss.xml"
+        class="text-sm text-muted transition-colors hover:text-accent"
+      >
+        RSS feed &rarr;
+      </a>
+    </p>
+  </section>
+
+  <section class="mt-14 rounded-xl border border-line bg-paper-raised p-6">
+    <ul class="flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium">
+      <li>
+        <a
+          href="https://www.linkedin.com/in/djfarrelly/"
+          class="transition-colors hover:text-accent"
+        >
+          Contact me &rarr;
+        </a>
+      </li>
+      <li>
+        <a href="/speaking-and-press/" class="transition-colors hover:text-accent">
+          Speaking &amp; press &rarr;
+        </a>
+      </li>
+      <li>
+        <a href="/about/" class="transition-colors hover:text-accent">
+          More about me &rarr;
+        </a>
+      </li>
+    </ul>
+  </section>
+</BaseLayout>
