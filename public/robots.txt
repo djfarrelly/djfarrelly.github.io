@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://danfarrelly.com/sitemap-index.xml

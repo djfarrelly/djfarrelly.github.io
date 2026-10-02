@@ -1,16 +1,15 @@
 {
   "name": "danfarrelly.com",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "type": "module",
-  "main": "build.js",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "build": "node --import tsx ./build.js",
-    "watch": "node --watch-path=./build.js --watch-path=./components --watch-path=./lib --watch-path=./posts --watch-path=./css --import tsx ./build.js",
-    "serve": "pnpm dlx serve -l 8080 ."
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "repository": {
     "type": "git",
@@ -28,12 +27,13 @@
     ]
   },
   "dependencies": {
-    "marked": "^18.0.9",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "shiki": "^4.4.3",
-    "tsx": "^4.23.12",
-    "yaml": "^2.9.0"
+    "@astrojs/markdown-satteri": "^0.4.2",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.5",
+    "tailwindcss": "^4.3.3"
   },
   "packageManager": "pnpm@10.27.0+sha512.72d699da16b1179c14ba9e64dc71c9a40988cbdc65c264cb0e489db7de917f20dcf4d64d8723625f2969ba52d4b7e2a1170682d9ac2a5dcaeaab732b7e16f04a",
   "volta": {
