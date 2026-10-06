@@ -37,7 +37,7 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
                   {post.data.title}
                 </a>
               </h2>
-              <span class="text-sm text-muted text-right">
+              <span class="text-sm text-muted sm:text-right">
                 <time dateTime={post.data.date}>
                   {formatMonthYear(post.data.date)}
                 </time>
