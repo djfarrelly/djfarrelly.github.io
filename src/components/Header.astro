@@ -1,0 +1,32 @@
+---
+const SITE_TITLE = "Dan Farrelly";
+const isHomepage = Astro.url.pathname === "/";
+---
+
+<header>
+  <div class="mx-auto flex w-full items-center justify-between py-6">
+    {
+      isHomepage ? (
+        <h1 class="text-base sm:text-lg font-bold">{SITE_TITLE}</h1>
+      ) : (
+        <a
+          href="/"
+          class="text-base font-bold text-ink no-underline transition-colors hover:text-accent"
+        >
+          {SITE_TITLE}
+        </a>
+      )
+    }
+
+    <nav class="flex gap-4 sm:gap-6 text-sm text-muted">
+      <a href="/about/" class="transition-colors hover:text-accent">About</a>
+      <a href="/blog/" class="transition-colors hover:text-accent">Writing</a>
+      <a
+        href="/speaking-and-press/"
+        class="transition-colors hover:text-accent"
+      >
+        Speaking&nbsp;&amp;&nbsp;Press
+      </a>
+    </nav>
+  </div>
+</header>

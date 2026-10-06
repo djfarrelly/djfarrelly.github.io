@@ -44,26 +44,30 @@ const structuredData = {
 >
   <article class="py-10">
     <header>
-      <h1 class="text-balance text-3xl font-bold leading-tight tracking-tight">
+      <h1 class="text-balance text-3xl font-bold leading-tight">
         {data.title}
       </h1>
-      {data.date && (
-        <p class="mt-3 text-sm text-muted">
-          <time dateTime={data.date}>{formatDate(data.date)}</time> by Dan Farrelly
-        </p>
-      )}
+      {
+        data.date && (
+          <p class="mt-3 text-sm text-muted">
+            <time dateTime={data.date}>{formatDate(data.date)}</time> by Dan
+            Farrelly
+          </p>
+        )
+      }
     </header>
 
     {
       data.canonical && (
-        <p class="mt-6 rounded-lg border border-line bg-paper-raised px-4 py-3 text-sm text-muted">
-          <em>
-            This article was originally posted on the{" "}
-            <a href={data.canonical} class="font-medium text-accent hover:text-accent-strong">
-              {data.canonicalSource}
-            </a>
-            {data.xImpressions ? ` (${data.xImpressions}+ views)` : ""}.
-          </em>
+        <p class="mt-6 rounded-lg border border-line px-4 py-3 text-sm text-muted">
+          This article was originally posted on the{" "}
+          <a
+            href={data.canonical}
+            class="font-medium text-accent hover:text-accent-strong"
+          >
+            {data.canonicalSource}
+          </a>
+          {data.xImpressions ? ` (${data.xImpressions}+ views)` : ""}.
         </p>
       )
     }
@@ -73,5 +77,9 @@ const structuredData = {
     </div>
   </article>
 
-  <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify(structuredData)}
+  />
 </BaseLayout>

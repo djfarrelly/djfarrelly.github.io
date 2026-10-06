@@ -5,6 +5,7 @@
   --font-sans:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: "Lora", ui-serif, Georgia, "Times New Roman", serif;
   --font-mono:
     ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
     monospace;
@@ -14,7 +15,7 @@
   --color-paper-raised: #f5f3ee;
   --color-ink: #1c1917;
   --color-muted: #78716c;
-  --color-line: #e7e5e4;
+  --color-line: #ecf3f0;
   --color-accent: #546b41;
   --color-accent-strong: #40522f;
   --color-code-bg: #f0f5f9;
@@ -22,6 +23,16 @@
 
 html {
   color-scheme: light;
+}
+
+@layer base {
+  a {
+    @apply text-accent underline transition-colors;
+  }
+
+  a:hover {
+    @apply text-accent-strong;
+  }
 }
 
 ::selection {
@@ -95,8 +106,6 @@ html {
 }
 
 .prose a {
-  font-weight: inherit;
-  text-decoration: none;
   transition: color 200ms ease;
 }
 

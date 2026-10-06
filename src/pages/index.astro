@@ -1,90 +1,106 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { formatDate, getPostUrl } from "../lib/format.js";
+import Header from "../components/Header.astro";
+import { formatDate, formatMonthYear, getPostUrl } from "../lib/format.js";
 
 const DESCRIPTION =
-  "Co-founder and CTO at Inngest. Formerly CTO at Buffer. Writing about event-driven architecture, durable execution, and building AI agent systems.";
+  "Co-founder and CTO at Inngest. Writing about building agentic systems, software engineering, and event-driven architecture.";
 
 const posts = (await getCollection("blog", ({ data }) => !data.draft))
   .sort((a, b) => (b.data.date ?? "").localeCompare(a.data.date ?? ""))
   .slice(0, 5);
+
+const PROJECTS = [
+  { name: "Inngest", url: "https://www.inngest.com", stars: "5.9k" },
+  { name: "MailDev", url: "https://maildev.github.io/maildev/", stars: "6.1k" },
+];
 ---
 
 <BaseLayout
   title="Dan Farrelly"
   description={DESCRIPTION}
   googleSiteVerification="MKYWJyvqSUEJDS-W42zXoEUZOggAoyKsobl6XU6-uCw"
+  isHomepage={true}
 >
-  <section class="py-12 sm:py-16">
+  <section class="pt-[clamp(4rem,10vh,8rem)] mb-16">
     <img
-      src="/images/about-dan-sasquatch.jpg"
+      src="/images/headshot-2026-09-640px.png"
       alt="Dan Farrelly"
       width="96"
       height="96"
       class="size-24 rounded-full object-cover ring-1 ring-line"
     />
-    <h1 class="mt-6 text-4xl font-bold tracking-tight">Dan Farrelly</h1>
-    <p class="mt-4 max-w-prose text-lg leading-relaxed text-ink">
-      {DESCRIPTION}
-    </p>
+    <Header />
+    <div class="max-w-prose text-base leading-relaxed text-ink">
+      <p class="mb-4">
+        I'm the co-founder at CTO of <a href="https://www.inngest.com/"
+          >Inngest</a
+        >, a developer platform for reliable orchestration of any asynchronous
+        code. I do fractional work and advising through <a
+          href="https://2525.tech/">2525.tech</a
+        >.
+      </p>
+      <p class="my-4">
+        I write about agentic systems and software architecture among other
+        topics, build open source projects, and speak at events.
+      </p>
+      <p class="my-4">
+        <a href="https://www.linkedin.com/in/djfarrelly/">Get in touch &rarr;</a
+        >
+      </p>
+    </div>
   </section>
 
-  <section>
+  <section class="my-10">
     <h2 class="text-sm font-bold uppercase tracking-widest text-muted">
       Latest writing
     </h2>
-    <ul class="mt-4 divide-y divide-line">
+    <ul class="my-2 divide-y divide-line divide-">
       {
         posts.map((post) => (
-          <li class="py-5">
+          <li class="py-4 flex flex-col sm:flex-row justify-between sm:items-center">
             <a href={getPostUrl(post.id)} class="group block">
-              <h3 class="font-semibold leading-snug transition-colors group-hover:text-accent">
-                {post.data.title}
-              </h3>
-              <p class="mt-1 text-sm text-muted">
-                <time dateTime={post.data.date}>{formatDate(post.data.date)}</time>
-              </p>
-              {post.data.description && (
-                <p class="mt-2 text-sm leading-relaxed text-muted">
-                  {post.data.description}
-                </p>
-              )}
+              <h3 class="transition-colors">{post.data.title}</h3>
             </a>
+            <p class="mt-1 sm:mt-0 text-sm text-muted">
+              <time dateTime={post.data.date}>
+                {formatMonthYear(post.data.date)}
+              </time>
+            </p>
           </li>
         ))
       }
     </ul>
-    <p class="mt-6">
+    <p class="mt-4">
       <a
-        href="/rss.xml"
+        href="/blog/"
         class="text-sm text-muted transition-colors hover:text-accent"
       >
-        RSS feed &rarr;
+        All writing &rarr;
       </a>
     </p>
   </section>
 
-  <section class="mt-14 rounded-xl border border-line bg-paper-raised p-6">
-    <ul class="flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium">
-      <li>
-        <a
-          href="https://www.linkedin.com/in/djfarrelly/"
-          class="transition-colors hover:text-accent"
-        >
-          Contact me &rarr;
-        </a>
-      </li>
-      <li>
-        <a href="/speaking-and-press/" class="transition-colors hover:text-accent">
-          Speaking &amp; press &rarr;
-        </a>
-      </li>
-      <li>
-        <a href="/about/" class="transition-colors hover:text-accent">
-          More about me &rarr;
-        </a>
-      </li>
+  <section class="my-16">
+    <h2 class="text-sm font-bold uppercase tracking-widest text-muted">
+      Projects
+    </h2>
+    <ul class="my-2 divide-y divide-line divide-">
+      {
+        PROJECTS.map((project) => (
+          <li class="py-4 flex flex-col sm:flex-row justify-between sm:items-center">
+            <a href={project.url} class="group block">
+              <h3 class="transition-colors">{project.name}</h3>
+            </a>
+            <p class="mt-1 sm:mt-0 text-sm text-muted">
+              {project.stars && (
+                <span class="text-xs text-muted/70"> ⭐︎ {project.stars}</span>
+              )}
+            </p>
+          </li>
+        ))
+      }
     </ul>
   </section>
 </BaseLayout>
