@@ -1,7 +1,7 @@
 ---
 title: "Your Agent Architecture Has a Half-Life. Your Execution Layer Shouldn't."
 date: "2026-07-21"
-description: "Every six months, the \"right\" way to build an agent changes. Here's the one layer worth owning — and how to make everything else swappable."
+description: 'Every six months, the "right" way to build an agent changes. How should you architect your agentic system for evolution.'
 canonical: "https://www.inngest.com/blog/your-agent-architecture-has-a-half-life"
 canonicalSource: "Inngest Blog"
 image: "/images/posts/your-agent-architecture-has-a-half-life/featured-image-v2.png"
@@ -14,7 +14,7 @@ tags:
   - "ai engineering"
 ---
 
-*This article is adapted from a talk I gave at the AI Engineer World's Fair 2026 in San Francisco.*
+_This article is adapted from a talk I gave at the AI Engineer World's Fair 2026 in San Francisco._
 
 <div class="video">
     <iframe
@@ -48,11 +48,11 @@ I've written before about [why agents need a harness, not a framework](https://w
 
 ![Layers of the harness: execution, context, compute](/images/posts/your-agent-architecture-has-a-half-life/harness-layers.png)
 
-| Layer          | Role          | Contains                                          | Half-life |
-| -------------- | ------------- | ------------------------------------------------- | --------- |
-| **Execution**  | The brain     | flow · state · durability · retries · coordination | years     |
-| **Context**    | The knowledge | models · prompts · tools · memory · RAG           | weeks     |
-| **Compute**    | The hands     | sandboxes · runtimes · browsers                   | months    |
+| Layer         | Role          | Contains                                           | Half-life |
+| ------------- | ------------- | -------------------------------------------------- | --------- |
+| **Execution** | The brain     | flow · state · durability · retries · coordination | years     |
+| **Context**   | The knowledge | models · prompts · tools · memory · RAG            | weeks     |
+| **Compute**   | The hands     | sandboxes · runtimes · browsers                    | months    |
 
 **Execution** is what orchestrates each step of your agent. How work flows, how state persists, how failures are handled, how agents coordinate with each other. It's the brain.
 
@@ -134,7 +134,7 @@ const analyzeData = inngest.createFunction(
     });
 
     return report;
-  }
+  },
 );
 ```
 
@@ -178,7 +178,7 @@ const orchestrator = inngest.createFunction(
         data: { plan: research.plan, approved: true },
       });
     }
-  }
+  },
 );
 ```
 
@@ -279,7 +279,7 @@ const agentTask = inngest.createFunction(
       function: tokenEfficiencyScorer,
       data: { metadata: result.metadata },
     });
-  }
+  },
 );
 ```
 

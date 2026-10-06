@@ -28,11 +28,15 @@ const entries = (await getCollection("speakingPress")).sort((a, b) =>
       {
         entries.map(({ data: entry }) => (
           <li class="py-5">
-            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <h2 class="font-semibold leading-snug">{entry.title}</h2>
-              <span class="rounded-full border border-line px-2.5 py-0.5 text-[11px] font-medium uppercase tracking-wider text-muted">
-                {entry.type}
-              </span>
+            <div class="grid sm:grid-cols-5 gap-x-4 gap-y-1">
+              <h2 class="font-semibold leading-snug col-span-4">
+                {entry.title}
+              </h2>
+              <div class="text-right">
+                <span class="rounded-full border border-line px-2.5 py-0.5 text-[11px] font-medium uppercase tracking-wider text-muted">
+                  {entry.type}
+                </span>
+              </div>
             </div>
             <p class="mt-1 text-sm text-muted">
               {entry.source}

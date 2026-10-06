@@ -1,7 +1,7 @@
 ---
 title: "The Agent Loop Architecture"
 date: "2026-06-18"
-description: "Everyone's asking what a loop is. The question nobody's asking is what runs the loop. Durable orchestration is the execution layer underneath — and it's the foundation of the agent loop architecture."
+description: "Everyone's asking what a loop is. The question nobody's asking is what runs the loop."
 canonical: "https://x.com/djfarrelly/status/2067677007140278630"
 canonicalSource: "X.com"
 xImpressions: "575k"

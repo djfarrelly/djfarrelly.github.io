@@ -1,7 +1,7 @@
 ---
 title: "Your Agent Needs a Harness, Not a Framework"
 date: "2026-03-03"
-description: "Agent runtimes don't need yet another framework — they need a durable, event-driven harness that connects tools, memory, and models on production-grade infrastructure."
+description: "Why build your harness, and how to do it to avoid the framework trap."
 canonical: "https://x.com/djfarrelly/status/2028556984396452250"
 canonicalSource: "X.com"
 xImpressions: "170k"
@@ -20,9 +20,9 @@ Agent runtimes need the same thing. The LLM is the engine. Tools are the periphe
 
 That's the harness. And every agent framework is building one from scratch — their own retry logic, their own state persistence, their own job queues, their own event routing.
 
-**Durable, event-driven infrastructure already solves** this. Every LLM call or tool call becomes a step — an independently retryable unit of work. If the process dies on iteration five, iterations one through four are already persisted. Events route triggers between functions. Concurrency controls prevent collisions. Step-level traces give you **full observability** over every iteration of the agent loop. The infrastructure *is* the harness.
+**Durable, event-driven infrastructure already solves** this. Every LLM call or tool call becomes a step — an independently retryable unit of work. If the process dies on iteration five, iterations one through four are already persisted. Events route triggers between functions. Concurrency controls prevent collisions. Step-level traces give you **full observability** over every iteration of the agent loop. The infrastructure _is_ the harness.
 
-We built Utah — **Universally Triggered Agent Harness** — to prove this out. A conversational Telegram or Slack agent with tools, memory, sub-agent delegation, and full durability. Minimal TypeScript, no framework. Just Inngest functions, steps, and events providing the harness around a standard think → act → observe loop. **Think of it as a *durable*, cloud-ready OpenClaw.**
+We built Utah — **Universally Triggered Agent Harness** — to prove this out. A conversational Telegram or Slack agent with tools, memory, sub-agent delegation, and full durability. Minimal TypeScript, no framework. Just Inngest functions, steps, and events providing the harness around a standard think → act → observe loop. **Think of it as a _durable_, cloud-ready OpenClaw.**
 
 The "universally triggered" part matters: Telegram or Slack webhooks, cron schedules, sub-agent invocations, inter-function events — the agent doesn't know or care how it was activated. The trigger is decoupled from the work. Add a Slack bot tomorrow and the agent loop doesn't change. The harness routes it.
 
@@ -38,7 +38,7 @@ Telegram or Slack webhooks hit Inngest Cloud, where a webhook transform converts
 
 The worker uses Inngest's `connect()` API which establishes a persistent WebSocket connection from your local machine (or a mac mini or a remote server) to Inngest Cloud, without needing a public endpoint.
 
-The agent loop running in the worker is simple: it's a while loop with “steps” and the steps call LLMs and run tools. We use Pi's provider interface and their tools as *they're both great*, but you could use anything here. You could swap for AI SDK, TanStack AI, create your own tools or hook into MCP.
+The agent loop running in the worker is simple: it's a while loop with “steps” and the steps call LLMs and run tools. We use Pi's provider interface and their tools as _they're both great_, but you could use anything here. You could swap for AI SDK, TanStack AI, create your own tools or hook into MCP.
 
 ## If it's local, why use Inngest? Why not just use OpenClaw?
 
@@ -119,7 +119,11 @@ On top of those, Utah adds a few custom tools: `remember` (persist notes to a da
 The point: the tools story for AI agents is the same as any other software. Use existing libraries. Wrap them in Inngest steps. Done.
 
 ```tsx
-import { createReadTool, createWriteTool, createBashTool, /* ... */ } from "@mariozechner/pi-coding-agent";
+import {
+  createReadTool,
+  createWriteTool,
+  createBashTool /* ... */,
+} from "@mariozechner/pi-coding-agent";
 
 const tools = [
   createReadTool(config.workspace.root),
@@ -139,12 +143,12 @@ Utah isn't a single function that does everything. It's six functions that commu
 
 ```tsx
 const functions = [
-  handleMessage,     // The main agent loop
-  sendReply,         // Send responses back to the channel
-  acknowledgeMessage,// Typing indicator — fires immediately
-  failureHandler,    // Global error handler across all functions
-  heartbeat,         // Periodic scheduled check-ins
-  subAgent,          // Isolated sub-agent runs via step.invoke()
+  handleMessage, // The main agent loop
+  sendReply, // Send responses back to the channel
+  acknowledgeMessage, // Typing indicator — fires immediately
+  failureHandler, // Global error handler across all functions
+  heartbeat, // Periodic scheduled check-ins
+  subAgent, // Isolated sub-agent runs via step.invoke()
 ];
 ```
 
@@ -185,7 +189,7 @@ export const subAgent = inngest.createFunction(
       isSubAgent: true,
     });
     return await agentLoop(step);
-  }
+  },
 );
 ```
 
@@ -232,7 +236,7 @@ const PRUNING = {
 
 Old tool results get soft-trimmed (keep head + tail) or hard-cleared entirely when total context gets large. The last three iterations always stay intact.
 
-On top of that, there's a separate compaction system for the *session itself* — when estimated tokens exceed a threshold, the conversation history gets summarized before feeding it into the next run. Pruning handles within-run context. Compaction handles across-run accumulation.
+On top of that, there's a separate compaction system for the _session itself_ — when estimated tokens exceed a threshold, the conversation history gets summarized before feeding it into the next run. Pruning handles within-run context. Compaction handles across-run accumulation.
 
 We also added budget warnings — system messages injected when the agent is running low on iterations, telling it to wrap up. And overflow recovery: if the LLM returns a context-too-large error mid-run, we force-compact the messages and retry without wasting an iteration. Between pruning, compaction, budget pressure, and overflow recovery, the agent stays on track.
 
