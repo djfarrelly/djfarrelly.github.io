@@ -16,7 +16,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   redirects: {
-    "/blog/about/": "/about",
+    "/blog/about/": "/about/",
   },
   markdown: {
     shikiConfig: {
