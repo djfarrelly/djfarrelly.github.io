@@ -48,7 +48,7 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
                 {post.data.description}
               </p>
             )}
-            {post.data.canonical && (
+            {(post.data.canonical || post.data.originUrl) && (
               <p class="mt-1 text-xs text-muted/70">
                 First published on {post.data.canonicalSource}
               </p>

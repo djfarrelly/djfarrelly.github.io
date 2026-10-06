@@ -2,7 +2,7 @@
 title: "Three sub-agent patterns you need for your agentic system"
 date: "2026-03-11"
 description: "Every agentic system that actually ships ends up needing three delegation patterns: one that blocks, one that fires and forgets, and one that runs later."
-canonical: "https://x.com/djfarrelly/status/2031838984813297748"
+originUrl: "https://x.com/djfarrelly/status/2031838984813297748"
 canonicalSource: "X.com"
 xImpressions: "59k"
 image: "/images/posts/three-patterns-you-need-for-agentic-systems/blog-banner.png"

@@ -2,7 +2,7 @@
 title: "Background agents are here. Your orchestration isn't ready."
 date: "2026-05-08"
 description: "What is needed to run effective agents asynchronously."
-canonical: "https://x.com/djfarrelly/status/2052779234234380479"
+originUrl: "https://x.com/djfarrelly/status/2052779234234380479"
 canonicalSource: "X.com"
 xImpressions: "42k"
 image: "/images/posts/background-agents-are-here-your-orchestration-isnt-ready/featured-image-gold.png"

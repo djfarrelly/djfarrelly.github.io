@@ -2,7 +2,7 @@
 title: "Your Agent Needs a Harness, Not a Framework"
 date: "2026-03-03"
 description: "Why build your harness, and how to do it to avoid the framework trap."
-canonical: "https://x.com/djfarrelly/status/2028556984396452250"
+originUrl: "https://x.com/djfarrelly/status/2028556984396452250"
 canonicalSource: "X.com"
 xImpressions: "170k"
 image: "/images/posts/your-agent-needs-a-harness-not-a-framework/featured-image.png"

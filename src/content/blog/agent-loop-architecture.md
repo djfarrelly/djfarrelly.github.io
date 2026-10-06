@@ -2,7 +2,7 @@
 title: "The Agent Loop Architecture"
 date: "2026-06-18"
 description: "Everyone's asking what a loop is. The question nobody's asking is what runs the loop."
-canonical: "https://x.com/djfarrelly/status/2067677007140278630"
+originUrl: "https://x.com/djfarrelly/status/2067677007140278630"
 canonicalSource: "X.com"
 xImpressions: "575k"
 image: "/images/posts/agent-loop-architecture/featured-image.png"
