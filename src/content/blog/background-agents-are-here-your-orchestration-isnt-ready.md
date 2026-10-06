@@ -1,7 +1,7 @@
 ---
 title: "Background agents are here. Your orchestration isn't ready."
 date: "2026-05-08"
-description: "Every six months, the \"right\" way to build an AI agent changes. How can you design for the next rewrite?"
+description: "What is needed to run effective agents asynchronously."
 canonical: "https://x.com/djfarrelly/status/2052779234234380479"
 canonicalSource: "X.com"
 xImpressions: "42k"

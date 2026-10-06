@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { formatMonthYear, getPostUrl } from "../../lib/format.js";
+
+const DESCRIPTION =
+  "Writing about building agentic systems, software engineering, and event-driven architecture.";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => (b.data.date ?? "").localeCompare(a.data.date ?? ""),
+);
+---
+
+<BaseLayout
+  title="Writing - Dan Farrelly"
+  ogTitle="Writing"
+  description={DESCRIPTION}
+>
+  <section class="py-10">
+    <h1 class="text-3xl font-bold">Writing</h1>
+
+    <ul class="mt-8 divide-y divide-line">
+      {
+        posts.map((post) => (
+          <li class="py-5">
+            <div class="grid sm:grid-cols-5 gap-x-4 gap-y-1">
+              <h2 class="font-semibold leading-snug col-span-4">
+                <a
+                  href={getPostUrl(post.id)}
+                  class="transition-colors hover:text-accent"
+                >
+                  {post.data.title}
+                </a>
+              </h2>
+              <span class="text-sm text-muted text-right">
+                <time dateTime={post.data.date}>
+                  {formatMonthYear(post.data.date)}
+                </time>
+              </span>
+            </div>
+            {post.data.description && (
+              <p class="mt-1 max-w-prose text-sm text-muted">
+                {post.data.description}
+              </p>
+            )}
+            {post.data.canonical && (
+              <p class="mt-1 text-xs text-muted/70">
+                First published on {post.data.canonicalSource}
+              </p>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>
