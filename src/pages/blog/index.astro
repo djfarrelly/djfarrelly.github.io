@@ -17,7 +17,12 @@ const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
   description={DESCRIPTION}
 >
   <section class="py-10">
-    <h1 class="text-3xl font-bold">Writing</h1>
+    <div class="flex justify-between items-center">
+      <h1 class="text-3xl font-bold">Writing</h1>
+      <p class="mt-3 max-w-prose text-muted">
+        <a href="/rss.xml">rss</a>
+      </p>
+    </div>
 
     <ul class="mt-8 divide-y divide-line">
       {
