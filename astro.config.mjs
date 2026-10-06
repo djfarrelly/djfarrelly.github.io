@@ -7,13 +7,16 @@ import { satteri } from "@astrojs/markdown-satteri";
 import headingSlugs from "./src/lib/heading-slugs.js";
 import externalBlank from "./src/lib/external-blank.js";
 
-const THEME = "github-light";
+const THEME = "dracula-soft";
 
 export default defineConfig({
   site: "https://danfarrelly.com",
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
+  },
+  redirects: {
+    "/blog/about/": "/about",
   },
   markdown: {
     shikiConfig: {

@@ -20,6 +20,24 @@ export function formatDate(date) {
     timeZone: "UTC",
   }).format(d);
 }
+export function formatMonthYear(date) {
+  if (!date) return null;
+  if (date.length === 4) return date;
+  const d = new Date(`${date}${date.length === 7 ? "-01" : ""}T00:00:00Z`);
+  if (date.length === 7) {
+    return new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    }).format(d);
+  }
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: undefined,
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(d);
+}
 
 export const parseDate = (date) => new Date(`${date}T00:00:00Z`);
 

@@ -13,7 +13,7 @@
       url: "https://danfarrelly.com/blog/your-agent-architecture-has-a-half-life/"
 
 - id: first-pass-jamin-ball-2026
-  type: interview
+  type: podcast
   title: "A discussion on Loop Engineering"
   source: "First Pass w/ Jamin Ball of Altimeter"
   date: "2026-07"
@@ -24,7 +24,7 @@
       url: "https://www.youtube.com/watch?v=1YpBSgZLWvs"
 
 - id: bry-learns-ai-2026
-  type: interview
+  type: podcast
   title: "What is an AI Agent"
   source: "Bry Learns AI"
   date: "2026-06"
@@ -33,7 +33,7 @@
       url: "https://www.youtube.com/watch?v=F4Wd-6uN_UQ"
 
 - id: codetv-jason-lengstorf-2026
-  type: interview
+  type: podcast
   title: "How to connect everything to everything with Inngest"
   source: "CodeTV w/ Jason Lengstorf"
   date: "2026-01"
@@ -123,6 +123,7 @@
   type: podcast
   title: "Embracing Feedback from Early Customers"
   source: "Founder Real Talk"
+  date: "2023-07"
   links:
     - label: "Listen"
       url: "https://open.spotify.com/episode/2bufnBEcTtJq9r94tmaFEA?si=6zhIcIxHR9K_Mx4ws-gpoA"
